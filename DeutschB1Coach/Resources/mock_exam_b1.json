@@ -1,0 +1,147 @@
+{
+  "id": "mock-b1-001",
+  "level": "B1",
+  "title": "B1 Mock Exam: Alltag, Arbeit und Gesellschaft",
+  "sections": [
+    {
+      "skill": "Hören",
+      "durationMinutes": 25,
+      "tasks": [
+        {
+          "prompt": "Sie hören eine Ansage am Bahnhof. Wählen Sie die richtige Antwort.",
+          "audioScript": "Achtung an Gleis vier: Der Zug nach Köln fährt heute wegen einer technischen Störung zehn Minuten später ab. Fahrgäste nach Bonn steigen bitte in Köln um.",
+          "questions": [
+            {
+              "question": "Was ist richtig?",
+              "choices": ["Der Zug fällt aus.", "Der Zug ist verspätet.", "Der Zug fährt früher."],
+              "answer": "Der Zug ist verspätet."
+            },
+            {
+              "question": "Wo steigen Fahrgäste nach Bonn um?",
+              "choices": ["Am Gleis vier", "In Köln", "In Bonn"],
+              "answer": "In Köln"
+            }
+          ]
+        },
+        {
+          "prompt": "Sie hören eine Nachricht von einer Arztpraxis.",
+          "audioScript": "Guten Tag, hier ist die Praxis Dr. Wagner. Ihr Termin am Dienstag um neun Uhr muss leider verschoben werden. Wir können Ihnen Mittwoch um halb elf oder Donnerstag um vierzehn Uhr anbieten. Bitte rufen Sie uns zurück.",
+          "questions": [
+            {
+              "question": "Warum ruft die Praxis an?",
+              "choices": ["Ein Rezept ist fertig.", "Der Termin muss verschoben werden.", "Die Praxis schließt."],
+              "answer": "Der Termin muss verschoben werden."
+            },
+            {
+              "question": "Was soll die Person tun?",
+              "choices": ["Zurückrufen", "Am Dienstag kommen", "Eine E-Mail schreiben"],
+              "answer": "Zurückrufen"
+            }
+          ]
+        },
+        {
+          "prompt": "Sie hören einen kurzen Radiobeitrag.",
+          "audioScript": "Immer mehr Beschäftigte fahren mit dem Fahrrad zur Arbeit. Eine neue Umfrage zeigt, dass dabei nicht nur die Kosten wichtig sind. Viele möchten sich im Alltag mehr bewegen und vermeiden außerdem die Parkplatzsuche.",
+          "questions": [
+            {
+              "question": "Welcher Grund wird genannt?",
+              "choices": ["Mehr Bewegung im Alltag", "Kürzere Arbeitszeiten", "Kostenlose Fahrräder"],
+              "answer": "Mehr Bewegung im Alltag"
+            },
+            {
+              "question": "Was möchten viele vermeiden?",
+              "choices": ["Die Parkplatzsuche", "Die Arbeit", "Eine Umfrage"],
+              "answer": "Die Parkplatzsuche"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "skill": "Lesen",
+      "durationMinutes": 45,
+      "tasks": [
+        {
+          "prompt": "Lesen Sie die Kursanzeige.",
+          "text": "Sprachschule Mitte sucht Teilnehmende für einen B1-Abendkurs. Der Kurs findet montags und mittwochs von 18:00 bis 20:15 Uhr statt. Wer mindestens 80 Prozent der Termine besucht, erhält eine Teilnahmebescheinigung.",
+          "questions": [
+            {
+              "question": "Wann findet der Kurs statt?",
+              "choices": ["Am Wochenende", "Montags und mittwochs am Abend", "Jeden Morgen"],
+              "answer": "Montags und mittwochs am Abend"
+            },
+            {
+              "question": "Wann erhält man eine Bescheinigung?",
+              "choices": ["Bei mindestens 80 Prozent Anwesenheit", "Nach jeder Stunde", "Nur nach einer Prüfung"],
+              "answer": "Bei mindestens 80 Prozent Anwesenheit"
+            }
+          ]
+        },
+        {
+          "prompt": "Lesen Sie die Mitteilung der Hausverwaltung.",
+          "text": "Wegen dringender Arbeiten an der Heizungsanlage steht am Donnerstag zwischen 8 und 13 Uhr kein warmes Wasser zur Verfügung. Die Hausverwaltung bittet um Verständnis. Sollte die Störung länger dauern, informieren wir Sie per E-Mail.",
+          "questions": [
+            {
+              "question": "Was ist am Donnerstag nicht verfügbar?",
+              "choices": ["Strom", "Warmes Wasser", "Internet"],
+              "answer": "Warmes Wasser"
+            },
+            {
+              "question": "Wie informiert die Verwaltung bei einer längeren Störung?",
+              "choices": ["Per Brief", "Per Telefon", "Per E-Mail"],
+              "answer": "Per E-Mail"
+            }
+          ]
+        },
+        {
+          "prompt": "Lesen Sie den Forumsbeitrag.",
+          "text": "Seit drei Monaten arbeite ich teilweise von zu Hause. Einerseits spare ich viel Zeit, weil der Arbeitsweg wegfällt. Andererseits fehlen mir die spontanen Gespräche mit meinen Kollegen. Für mich ist deshalb eine Mischung aus Büro und Homeoffice ideal.",
+          "questions": [
+            {
+              "question": "Welchen Vorteil nennt die Person?",
+              "choices": ["Mehr Gehalt", "Kein Arbeitsweg", "Weniger Aufgaben"],
+              "answer": "Kein Arbeitsweg"
+            },
+            {
+              "question": "Welche Lösung bevorzugt die Person?",
+              "choices": ["Nur Büro", "Nur Homeoffice", "Eine Mischung"],
+              "answer": "Eine Mischung"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "skill": "Schreiben",
+      "durationMinutes": 40,
+      "tasks": [
+        {
+          "prompt": "Sie können nicht zum Termin beim Bürgeramt kommen. Schreiben Sie eine E-Mail: entschuldigen Sie sich, erklären Sie den Grund, bitten Sie um einen neuen Termin und nennen Sie zwei mögliche Zeiten.",
+          "rubric": ["all task points covered", "formal greeting and closing", "clear paragraph structure", "correct verb position", "appropriate connectors"]
+        },
+        {
+          "prompt": "In einem Forum wird diskutiert, ob Beschäftigte regelmäßig im Homeoffice arbeiten sollten. Schreiben Sie Ihre Meinung, nennen Sie einen Vorteil und einen Nachteil und geben Sie ein Beispiel aus Ihrem Alltag.",
+          "rubric": ["clear opinion", "advantage and disadvantage", "relevant example", "logical connectors", "accurate sentence structure"]
+        }
+      ]
+    },
+    {
+      "skill": "Sprechen",
+      "durationMinutes": 15,
+      "tasks": [
+        {
+          "prompt": "Stellen Sie sich vor und sprechen Sie etwa eine Minute über Ihre Arbeit, Ausbildung oder Ihren Deutschkurs.",
+          "rubric": ["clear introduction", "relevant details", "pronunciation", "grammar accuracy", "fluency"]
+        },
+        {
+          "prompt": "Planen Sie ein gemeinsames Lernwochenende. Machen Sie Vorschläge zu Ort, Zeit, Material, Pausen und Verpflegung und reagieren Sie auf Alternativen.",
+          "rubric": ["makes suggestions", "asks questions", "agrees or disagrees politely", "covers practical details", "keeps interaction moving"]
+        },
+        {
+          "prompt": "Sprechen Sie über die Frage: Sollte man in der Stadt häufiger mit öffentlichen Verkehrsmitteln fahren? Nennen Sie Ihre Meinung, Gründe und ein Beispiel.",
+          "rubric": ["states an opinion", "gives at least two reasons", "uses an example", "uses connectors", "concludes clearly"]
+        }
+      ]
+    }
+  ]
+}

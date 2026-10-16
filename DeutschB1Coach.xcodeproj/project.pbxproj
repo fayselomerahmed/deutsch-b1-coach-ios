@@ -1,0 +1,1123 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		020ADE2617DFA954ECDCA1A0 /* orientation-hh-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 48F539C99F60EB4CED55434A /* orientation-hh-01.png */; };
+		02269AC8944EF7F87C911B2B /* ProductExperienceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508EF38806624C5D932A8906 /* ProductExperienceService.swift */; };
+		02B337CD92F7631E9E1BFEDC /* StudyReminderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFCE2DE8D9DAE54841F8DA5 /* StudyReminderService.swift */; };
+		044F6DB8D8374F62497526C8 /* LessonMemoryVisual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CE1D75B9D174D603DCA4D5 /* LessonMemoryVisual.swift */; };
+		04A298DB88E186C42702B292 /* ReviewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B3C6ACB2A9589FAF1EE5B2 /* ReviewModels.swift */; };
+		060040DE8BFC2188C8E152FF /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F1823AFCB8902DA973E2A0 /* ReviewView.swift */; };
+		065036F6BAE36D8D67B84C95 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC52308BEF76C0F9CF590C3 /* SettingsView.swift */; };
+		0700FBDBAAC59B8D2BE207C5 /* orientation-by-01.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFAB1C05EE8417E20590EFE /* orientation-by-01.png */; };
+		0826CC1720A93E6AC9A4D8AF /* CurriculumModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F762A48DE2819388595A6B0B /* CurriculumModels.swift */; };
+		0C05258BB13B68CDD1543876 /* NeuralAudio in Resources */ = {isa = PBXBuildFile; fileRef = 26B49943098933247526AE15 /* NeuralAudio */; };
+		0D800D8AC6047382FE65864F /* GermanSpeechService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857450D96230AA9E5601049D /* GermanSpeechService.swift */; };
+		0D9756408201FBF71E663B69 /* orientation-general-209.png in Resources */ = {isa = PBXBuildFile; fileRef = 423BF01A44288FA5D9E24330 /* orientation-general-209.png */; };
+		0F32BDA9AEC866B03C371BD9 /* orientation-general-176.png in Resources */ = {isa = PBXBuildFile; fileRef = 27969FEBAE98AE3C126DAA5F /* orientation-general-176.png */; };
+		11E929C3F9744E38111AD035 /* orientation-bb-01.png in Resources */ = {isa = PBXBuildFile; fileRef = D8918FC29BF304E4ECC8A066 /* orientation-bb-01.png */; };
+		16C3E6F54FAC375356556E20 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = CC19A3BECCA0FCBC045A99B5 /* PrivacyInfo.xcprivacy */; };
+		1D064AB2BF2141310187D7FB /* LessonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBA96B9666CE44EA8D581E6 /* LessonViewModel.swift */; };
+		1D673CE0D1605A2E5387A16F /* PracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF38D8E46E6DC4AFC313DE9 /* PracticeView.swift */; };
+		226801C8E3264463A072E13B /* vocab_b1.json in Resources */ = {isa = PBXBuildFile; fileRef = E7BA1D314EFDE112A8C6DEFA /* vocab_b1.json */; };
+		22985036AC7C13495CFB5241 /* CurriculumLibraryViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DB28E89E723725B3183175 /* CurriculumLibraryViews.swift */; };
+		24497E6AEEDC7634C66BA4CD /* orientation-mv-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 89D52725FCD5F86F7E471655 /* orientation-mv-01.png */; };
+		24BF6A19EA3380FACF41A2D5 /* es_translations.json in Resources */ = {isa = PBXBuildFile; fileRef = 9D9214F197348A6C865672F0 /* es_translations.json */; };
+		255D1592EB3010BBFC2809FB /* SM2Scheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229D8A78B92E2246E9338B95 /* SM2Scheduler.swift */; };
+		27C64AEC8353A88E9A830613 /* orientation-he-08.png in Resources */ = {isa = PBXBuildFile; fileRef = 3890E49792EC8256310D1F69 /* orientation-he-08.png */; };
+		288F6F570F68EA273A9F0C6F /* orientation-ni-01.png in Resources */ = {isa = PBXBuildFile; fileRef = C387E031F2B95F3EC7FAEF2D /* orientation-ni-01.png */; };
+		2995A31F331EA10BD5C175E0 /* CurriculumIntegrityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A87D6F491939092C93D50E /* CurriculumIntegrityTests.swift */; };
+		2A6D8662F67E648D49A97246 /* DeutschB1CoachApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4098333DD00321814A2179C5 /* DeutschB1CoachApp.swift */; };
+		2AE74843E245D2FE965C35C7 /* CurriculumFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076286900F54C95B5114458C /* CurriculumFactory.swift */; };
+		2C58AD3001431DF732BDB868 /* LearningVisuals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DCA66C1F01D17C508F6B4C /* LearningVisuals.swift */; };
+		2DA0882021986FCD3BCD266E /* ProgressService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7396B2804C686115F58E94C /* ProgressService.swift */; };
+		2DAD6834BCEC80047B9E6961 /* PracticalMissionViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1FFA1F34B59A851E127544 /* PracticalMissionViews.swift */; };
+		2E5AD49094408DC26D855C69 /* orientation-bw-01.png in Resources */ = {isa = PBXBuildFile; fileRef = AE89A571C05B8EB22821B0E4 /* orientation-bw-01.png */; };
+		3131F5137022C35B4687485F /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F6429F074FF3D26F57367F /* RootTabView.swift */; };
+		3343273DD577CD22D0BA8D50 /* DBCNeuralTTSBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = 50CE66F2D8800D30FD98DE5C /* DBCNeuralTTSBridge.mm */; };
+		33DA0B5BE6976804769DDEA6 /* mock_exam_b1.json in Resources */ = {isa = PBXBuildFile; fileRef = 492CC30C8BA484FE15260A4E /* mock_exam_b1.json */; };
+		342B3D4967AE771DAE15591D /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651E6E61FEA2015ACCF249BB /* DashboardView.swift */; };
+		352E5E8D76469DCC71A06C28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BF9A6F519DFF98629BC0AEE /* Assets.xcassets */; };
+		3699BC7375212169CF9E40D9 /* FirstLaunchTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD3F568ACC9489D7E20D56D /* FirstLaunchTutorialView.swift */; };
+		384AA347B019AC4BF0AC0BE9 /* IntegrationCourseCurriculum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DF0AEB74DD47D745ACDA0E /* IntegrationCourseCurriculum.swift */; };
+		3898EE3B293D233C051FE6D9 /* orientation-sh-08.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A8D1A75B75872E7BACD4244 /* orientation-sh-08.png */; };
+		39C08D274A49A26139A5BEF3 /* orientation-rp-08.png in Resources */ = {isa = PBXBuildFile; fileRef = 59D04AC982CCC8A38E7222BD /* orientation-rp-08.png */; };
+		3B053CEBAB6DB9D18D0B6DAB /* SpeechScorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474F52CB10C148B8523AC33A /* SpeechScorer.swift */; };
+		3FA0D9F37DE392BA388F051E /* ko_translations.json in Resources */ = {isa = PBXBuildFile; fileRef = 3EE16CEC6E4504BAF38891AE /* ko_translations.json */; };
+		3FD3303102E28F92FBAE3299 /* orientation-st-08.png in Resources */ = {isa = PBXBuildFile; fileRef = 47EF76C8997628DF3610011C /* orientation-st-08.png */; };
+		404B684361E0C0719FFAF8E2 /* SM2SchedulerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535EDCF8C3A364ABB69EB7A3 /* SM2SchedulerTests.swift */; };
+		411CC2FF6A9D51D416C9EAF6 /* ReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D54E7BD89E68D10B00AE14 /* ReviewViewModel.swift */; };
+		446A8BFF8AD896D8CE249B60 /* orientation-ni-08.png in Resources */ = {isa = PBXBuildFile; fileRef = 64824699ED28A04FAAD7837E /* orientation-ni-08.png */; };
+		45BC9EFF97409C7AA1B7CF57 /* orientation-rp-01.png in Resources */ = {isa = PBXBuildFile; fileRef = AEBE71AC438214B3E2BF1E95 /* orientation-rp-01.png */; };
+		46532C61AB83CD3F9CB30630 /* SpeakingCorrectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF49C363D6D12BF2D2B6E6B /* SpeakingCorrectionView.swift */; };
+		4733FBD679E252DADB480484 /* uk_translations.json in Resources */ = {isa = PBXBuildFile; fileRef = 3552C4CDD4DEAA4A2DCE5C41 /* uk_translations.json */; };
+		488F4C2A142240076DA42A9D /* FlashcardViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D864E61145EF66E2042DA9 /* FlashcardViews.swift */; };
+		4CCAA24A815FC90C5A7EACD0 /* TeachingText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4A8485534406613117E90B /* TeachingText.swift */; };
+		4CCD030529CFB03A0CDBD679 /* orientation-be-01.png in Resources */ = {isa = PBXBuildFile; fileRef = E844DF4A3A6F97D20890E5B8 /* orientation-be-01.png */; };
+		4F0FA2E755838351D1A0D3D9 /* orientation-sl-08.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A06F35C9328F0411C401315 /* orientation-sl-08.png */; };
+		5286E15699A99187FD889955 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E46668F93C91BBD38CD0773 /* DesignSystem.swift */; };
+		53C623D5BB1092C0F00BC430 /* OrientationMockExamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBF591D2D8136A7076E2E70 /* OrientationMockExamView.swift */; };
+		5667BAD16EED964307DE0CEF /* pt_translations.json in Resources */ = {isa = PBXBuildFile; fileRef = 743D7B72369877DF897DBAA0 /* pt_translations.json */; };
+		5BDC4E23B551CC900E78F7FF /* orientation-general-181.png in Resources */ = {isa = PBXBuildFile; fileRef = B64B7D762F7228E909D914C8 /* orientation-general-181.png */; };
+		5BFA5EE823B1637602376F57 /* UserProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = F025D636C42BBC36C5BBA496 /* UserProgress.swift */; };
+		61AC43578B64D2153B4510DC /* ContentLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05DBB159C108DC6B7EE5A52 /* ContentLoader.swift */; };
+		61B489AF0CD30F25F7E73FAB /* LessonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E761B97A0BF0A9BFBEDC8D0 /* LessonDetailView.swift */; };
+		6295283B032A40795156DDFF /* FirstLaunchLanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184AF0D492E918D8CF85BFB /* FirstLaunchLanguageView.swift */; };
+		63A0F1C9837C216247FD40A7 /* ExamPrepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7538942FB13BD66F8B12AFF9 /* ExamPrepView.swift */; };
+		64870B6179D1B73E0F11109E /* onnxruntime.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 498ACAA7E2FA35FCC4CD20D9 /* onnxruntime.xcframework */; };
+		6671A02645A26A5540606F23 /* orientation-general-055.png in Resources */ = {isa = PBXBuildFile; fileRef = C0FFD95743982E545829B407 /* orientation-general-055.png */; };
+		67372F33EF6715D88C768B8C /* vi_translations.json in Resources */ = {isa = PBXBuildFile; fileRef = 8B5E01976685C2A2FFDCA067 /* vi_translations.json */; };
+		6D3B531E3D610464136E3C5D /* tr_translations.json in Resources */ = {isa = PBXBuildFile; fileRef = 52963397D351C6428A061959 /* tr_translations.json */; };
+		6EE0B5498D421C08D8430C17 /* hi_translations.json in Resources */ = {isa = PBXBuildFile; fileRef = 90F863C9C1BD0C9A1878D3CE /* hi_translations.json */; };
+		6F36A0C4A67DAD9E153AEA30 /* CoachMascot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF7EC8B0B886A3793BA1074 /* CoachMascot.swift */; };
+		726EB679E9EE8194D76C752D /* orientation-nw-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BA641EF7ABBEEF1A8259BED /* orientation-nw-01.png */; };
+		7474BB230A8CD8E1E3D91915 /* practical_missions.json in Resources */ = {isa = PBXBuildFile; fileRef = 27BDA9FD02D8916BB961FBCB /* practical_missions.json */; };
+		785FA312A6CC76F826DA5808 /* orientation-general-021.png in Resources */ = {isa = PBXBuildFile; fileRef = F205D39CD1FAEFF44B46F222 /* orientation-general-021.png */; };
+		78E629ECEE3C43842CBA1077 /* orientation-he-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 3501AADF49D0C9E71BC6F69C /* orientation-he-01.png */; };
+		798E7D0F4B41F4707BFF1CFB /* PremiumAccessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1198782FA80C9B21D22891 /* PremiumAccessService.swift */; };
+		7B1120540AEA22191F92D103 /* OnDeviceGermanVoiceRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D80E85D537CCB4A2D76A2F4 /* OnDeviceGermanVoiceRenderer.swift */; };
+		7CF54E05A255CBB5019332F6 /* orientation-sh-01.png in Resources */ = {isa = PBXBuildFile; fileRef = B1C63B3BAF970AFBF7A33D52 /* orientation-sh-01.png */; };
+		7FF710D62F6AC54CF3C30A67 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83706BC4E34072C9F0BE59F3 /* QuizViewModel.swift */; };
+		85875F48F2EDC0D948E24376 /* sherpa-onnx.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF6798F34E6AA4DB43269D5D /* sherpa-onnx.xcframework */; };
+		8752A3FA7F9FCCD68E7DFC2A /* orientation-general-187.png in Resources */ = {isa = PBXBuildFile; fileRef = F0858687DE61C533135977FD /* orientation-general-187.png */; };
+		88828E1FD64D5FA52B3D38F5 /* orientation-bw-08.png in Resources */ = {isa = PBXBuildFile; fileRef = B7C4ABDD22194FEE9559048E /* orientation-bw-08.png */; };
+		8A934F795697971F10167C0B /* SpeechRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B61C84A92FDB127534F9B48 /* SpeechRecognitionService.swift */; };
+		8B14E4D73532FB05C2F38048 /* ti_translations.json in Resources */ = {isa = PBXBuildFile; fileRef = 8817618E6D6BF9151D6162CB /* ti_translations.json */; };
+		8BF22565DAB16B69B60E0648 /* MainFeatureTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E44E0E5755BCC6CFBE32E81 /* MainFeatureTutorial.swift */; };
+		90663EE411AEACC3C4BAF911 /* SpeakingPracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB995AB432744E8BF8E378D0 /* SpeakingPracticeView.swift */; };
+		9070112C1EA477E0E69B8D9B /* amharic_translations.json in Resources */ = {isa = PBXBuildFile; fileRef = A4A2DD263765C265F2220A1C /* amharic_translations.json */; };
+		90CB00C2987EDB84C101ECB6 /* NeuralTTSModel in Resources */ = {isa = PBXBuildFile; fileRef = D1AA9BB2E6A821B99880701E /* NeuralTTSModel */; };
+		92E2DDADE317991F789167E0 /* TeachingLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5FD0C7B1E91DB3F2502A43 /* TeachingLanguage.swift */; };
+		93B9885C4EF1BE90D6C28BDF /* LessonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F50BC7FBBB714FAE8C322F /* LessonsView.swift */; };
+		95958DC70E9D633162355992 /* SimplifiedExplanationCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA6CF7A1001C19808F90EBE /* SimplifiedExplanationCatalog.swift */; };
+		962E3660FFBAD6D021A87F2B /* OrientationMockExam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E2BE793B5C7DE379588333 /* OrientationMockExam.swift */; };
+		970C555B1BDF1A2C7B08DBD8 /* orientation-general-130.png in Resources */ = {isa = PBXBuildFile; fileRef = 75845270ECC33F9494602C36 /* orientation-general-130.png */; };
+		97508D0FD250527855583C57 /* CurriculumProgression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EE12F82505AD24010028E8 /* CurriculumProgression.swift */; };
+		99AFE9E4CAB9D1BD8A53A84B /* orientation-bb-08.png in Resources */ = {isa = PBXBuildFile; fileRef = 3251A61B1EE4BF64B62FDF24 /* orientation-bb-08.png */; };
+		9E450F179A76C6715B96266F /* CoachRoadJourneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A62269B08AA3C9283092E8A /* CoachRoadJourneyView.swift */; };
+		9FEFCFDA3F5E8B86F68D923C /* quizzes.json in Resources */ = {isa = PBXBuildFile; fileRef = 72600DC302012AE42E1610DB /* quizzes.json */; };
+		A5169D924CA4F378FE42D96F /* MockExamModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BE10AC081BA39C4CBF31BB /* MockExamModels.swift */; };
+		A57C089F60A150D62BD76869 /* FreeResponseEvaluatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB71CEB6ED0A6FBDAA002BB4 /* FreeResponseEvaluatorTests.swift */; };
+		A79B996C316D301C1F63DE80 /* PlacementEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAC22CFC4BB72399229AE11 /* PlacementEngine.swift */; };
+		A9AFB44F98E39684A34B4D64 /* SkillDrillViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40092C0B117627F3F85A5A27 /* SkillDrillViews.swift */; };
+		AAC318FF76E5D40178436269 /* grammar.json in Resources */ = {isa = PBXBuildFile; fileRef = A09FC15C458CF26372E44390 /* grammar.json */; };
+		ABB239913A55D45396F80AD4 /* orientation_questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 06ABC36E27207E8C656D1A91 /* orientation_questions.json */; };
+		ADB503071FDC08E5A66977ED /* orientation-th-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 46D0D29C0A4FF175BCBAECF8 /* orientation-th-01.png */; };
+		AE612E90494188EE3C4C7E2A /* PremiumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7DB044163C226AF5B4B072 /* PremiumView.swift */; };
+		AE9466ED4C4B22ED8751EDBC /* orientation-general-226.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F9F7B84B619B3F6098699B2 /* orientation-general-226.png */; };
+		B07B913DE64E8F5DC720971F /* WritingPracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738CEE29EACC7E6718405D96 /* WritingPracticeView.swift */; };
+		B139516E354337DB63A2D90E /* orientation-by-08.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F350E70B49AAB383172255F /* orientation-by-08.png */; };
+		B1C30A3E617B855F8C4C4A92 /* ru_translations.json in Resources */ = {isa = PBXBuildFile; fileRef = 76180B2F001B85B418E15DFB /* ru_translations.json */; };
+		B1E0CDE37C46475A2C56BD24 /* ExamReadiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1651E5C73A306C4E5494F037 /* ExamReadiness.swift */; };
+		B2C9DD02A6A0325FF055C77D /* orientation-sl-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 340DC05601681DEAF59E546D /* orientation-sl-01.png */; };
+		B3B62EA23F626531CBE7996F /* fr_translations.json in Resources */ = {isa = PBXBuildFile; fileRef = BE074A745BB76BBEC02EF8CA /* fr_translations.json */; };
+		B9B711B9BA21E94B4DBAD92E /* pl_translations.json in Resources */ = {isa = PBXBuildFile; fileRef = D925178A4EB0931FFA1C4740 /* pl_translations.json */; };
+		BA36F384D2D695377A56A87E /* nl_translations.json in Resources */ = {isa = PBXBuildFile; fileRef = DD6B2F76964FD70F9AD27299 /* nl_translations.json */; };
+		BB2E2E403B4127DDC99BE318 /* th_translations.json in Resources */ = {isa = PBXBuildFile; fileRef = B1385EB1E02BD720B01D256D /* th_translations.json */; };
+		C06634C8DD53441C169F1E27 /* orientation-nw-08.png in Resources */ = {isa = PBXBuildFile; fileRef = 819007EDA43F488867ACFE41 /* orientation-nw-08.png */; };
+		C14A8B0B22D880F43E8EBFB5 /* vocab_a2.json in Resources */ = {isa = PBXBuildFile; fileRef = C7A6023AA2AA508FEC4129CC /* vocab_a2.json */; };
+		C268FC6BA37979B4B88C0322 /* orientation-hh-08.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DE42C6C1F1A0FB8F7CCBC8C /* orientation-hh-08.png */; };
+		C2FB76F8A71BB6343491E340 /* it_translations.json in Resources */ = {isa = PBXBuildFile; fileRef = 7B265DC36F47418ABF7442B3 /* it_translations.json */; };
+		C40BFFE6D5C210AE9B00F518 /* VocabularyMatchGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AFC3D4EEB70EE3D3F56441 /* VocabularyMatchGameView.swift */; };
+		C86D5FF11DC9E6E24030FB73 /* orientation-sn-01.png in Resources */ = {isa = PBXBuildFile; fileRef = E9FDF984A1B953BBE62BDC64 /* orientation-sn-01.png */; };
+		C8ED2CEF69EBD17E37EA2112 /* ja_translations.json in Resources */ = {isa = PBXBuildFile; fileRef = F0B7AC5EB56EF7C400964F6A /* ja_translations.json */; };
+		C9444D4E1E38EDBB27909C6F /* orientation-hb-08.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E53C674DD673D5DB50F8829 /* orientation-hb-08.png */; };
+		CB42D0ACA29971F5AA5BBF9B /* orientation-be-08.png in Resources */ = {isa = PBXBuildFile; fileRef = D59048908434E771793120DC /* orientation-be-08.png */; };
+		CBDC11C01BDCDFCE30A847BC /* SpeechScorerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A4E1BBC3F69837BAAC33B9 /* SpeechScorerTests.swift */; };
+		CEF5732348E3E7FF1E5A722A /* orientation-hb-01.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A7D714F019B185EB217B75 /* orientation-hb-01.png */; };
+		CF09F14F95F8FDFC67ECF8EC /* LearningRecordModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68C6A1803AF7D0D5FEEF853 /* LearningRecordModels.swift */; };
+		CF2F65FF76D57096BB70B390 /* SpeakingPracticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75910597DAFF826F64BCD0E2 /* SpeakingPracticeViewModel.swift */; };
+		D1C6A424D723122700200EAB /* IntegrationCourseViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58AF8919A9BD85939B776A5 /* IntegrationCourseViews.swift */; };
+		D465E12383BA969595B9831C /* ar_translations.json in Resources */ = {isa = PBXBuildFile; fileRef = 51B548322B98CA7A41999C0B /* ar_translations.json */; };
+		D567D87474231CDCFF8D1FDD /* OrientationQuestionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D99BBB317E6C994AA4070B /* OrientationQuestionRepository.swift */; };
+		D66712E5D18F2B7393F5B297 /* orientation-general-070.png in Resources */ = {isa = PBXBuildFile; fileRef = 310CD7F20B1A56C440920860 /* orientation-general-070.png */; };
+		D762149ADCACD47CC15C8DEF /* VocabularyStudyProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0628E91AACF9DD542ED3EBB6 /* VocabularyStudyProgress.swift */; };
+		D971ED0FE51A6F9C91F9E725 /* SimplifiedExplanationViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E54B59A574A8CC933FE38C /* SimplifiedExplanationViews.swift */; };
+		D979002DF2F211686B7CB93E /* orientation-th-08.png in Resources */ = {isa = PBXBuildFile; fileRef = 90C35BEDEC02B01273179833 /* orientation-th-08.png */; };
+		D9BBC9C30FC3E4B73F4AA7CE /* NativeLearningDesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B65B75D799C3A55C2BD732 /* NativeLearningDesignSystem.swift */; };
+		DA57D8FD7C4BAC26D25D603A /* id_translations.json in Resources */ = {isa = PBXBuildFile; fileRef = 88A7077A0AE2E25AFD98D7BF /* id_translations.json */; };
+		DB8372EF6F3E5B1E23276309 /* TopicLessonViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C78B0C6DD6909CF70856F /* TopicLessonViews.swift */; };
+		DC942A1517335288CE27B4F2 /* orientation-st-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 09F275F583A5755F4C2199ED /* orientation-st-01.png */; };
+		DDEB88CB195AC305E7E6533A /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEE9F95A3D34D2EE2806264 /* DashboardViewModel.swift */; };
+		DF75C1B28BFE357FB2D689A7 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB73696D73419FAAFCB63E /* QuizView.swift */; };
+		E253149C7569BCB360EDE806 /* OnboardingPlacementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC56B6BC3A22A0475A783EE /* OnboardingPlacementView.swift */; };
+		E3E4EB4031D344222CA0796C /* DailyFocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59741E5EC07F082101EFF125 /* DailyFocusView.swift */; };
+		E5A86518B34BC025F5331329 /* orientation-sn-08.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DABD47DAC81460F48713651 /* orientation-sn-08.png */; };
+		E643D77B7A4D3ED8FD33F0D2 /* orientation-general-235.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C39D47E0A9CEAF7F9840831 /* orientation-general-235.png */; };
+		E8516FB327742B8AFA881BDD /* EverydayPhrasebookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFE5D5453D611E84DFB2B12 /* EverydayPhrasebookView.swift */; };
+		E8E44022DCD5025183077D9F /* LessonTeachingVisuals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21466255AEE5EDF9FDD703E5 /* LessonTeachingVisuals.swift */; };
+		EBEF10C733BDCF195F7875EF /* orientation-general-216.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EAFFDB471F57823EA524E3C /* orientation-general-216.png */; };
+		ED727960C40E862EB358A3D4 /* FluencyTaskCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C93B94B7FB50A508AF73960 /* FluencyTaskCatalog.swift */; };
+		EFB47C6F9A6E8CC6F2331205 /* everyday_phrases.json in Resources */ = {isa = PBXBuildFile; fileRef = 1FE0318801939F57AA4DF589 /* everyday_phrases.json */; };
+		EFFF37AD441481C0A2D901AA /* vocab_a1.json in Resources */ = {isa = PBXBuildFile; fileRef = 1C07349743FABA78402D5B25 /* vocab_a1.json */; };
+		F08C40D3928D5BC21035941A /* orientation-mv-08.png in Resources */ = {isa = PBXBuildFile; fileRef = 512DBC65AFAF493A94C96AFF /* orientation-mv-08.png */; };
+		F4471302BBEC2BF219297917 /* FreeResponseEvaluator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08994450879D042E7E0110A /* FreeResponseEvaluator.swift */; };
+		F714F96E695A2117B7111F23 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E440FC51F84D361ADB3488 /* ProgressView.swift */; };
+		FABF2EED3E96A2B9906F0CA2 /* zh-Hans_translations.json in Resources */ = {isa = PBXBuildFile; fileRef = F8856098D9057791E8A96875 /* zh-Hans_translations.json */; };
+		FBDE575F175CF7AD61A60564 /* JourneyEntryViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFD668306F53229585038CA /* JourneyEntryViews.swift */; };
+		FD32DFA72B5B4AB5B425661B /* lessons.json in Resources */ = {isa = PBXBuildFile; fileRef = ABDF91C0A9131873D30E98C4 /* lessons.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F7B96D0EDD36D47E563A21D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2017D9849A1B231C1377162D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 06814117996E514C6F98BB3A;
+			remoteInfo = DeutschB1Coach;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00B3C6ACB2A9589FAF1EE5B2 /* ReviewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewModels.swift; sourceTree = "<group>"; };
+		0628E91AACF9DD542ED3EBB6 /* VocabularyStudyProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyStudyProgress.swift; sourceTree = "<group>"; };
+		06ABC36E27207E8C656D1A91 /* orientation_questions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = orientation_questions.json; sourceTree = "<group>"; };
+		076286900F54C95B5114458C /* CurriculumFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumFactory.swift; sourceTree = "<group>"; };
+		07F1823AFCB8902DA973E2A0 /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
+		09AFC3D4EEB70EE3D3F56441 /* VocabularyMatchGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyMatchGameView.swift; sourceTree = "<group>"; };
+		09CE1D75B9D174D603DCA4D5 /* LessonMemoryVisual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonMemoryVisual.swift; sourceTree = "<group>"; };
+		09F275F583A5755F4C2199ED /* orientation-st-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-st-01.png"; sourceTree = "<group>"; };
+		0EBA96B9666CE44EA8D581E6 /* LessonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonViewModel.swift; sourceTree = "<group>"; };
+		0F350E70B49AAB383172255F /* orientation-by-08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-by-08.png"; sourceTree = "<group>"; };
+		1184AF0D492E918D8CF85BFB /* FirstLaunchLanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLaunchLanguageView.swift; sourceTree = "<group>"; };
+		1651E5C73A306C4E5494F037 /* ExamReadiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamReadiness.swift; sourceTree = "<group>"; };
+		1BA641EF7ABBEEF1A8259BED /* orientation-nw-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-nw-01.png"; sourceTree = "<group>"; };
+		1C07349743FABA78402D5B25 /* vocab_a1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = vocab_a1.json; sourceTree = "<group>"; };
+		1F9F7B84B619B3F6098699B2 /* orientation-general-226.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-general-226.png"; sourceTree = "<group>"; };
+		1FE0318801939F57AA4DF589 /* everyday_phrases.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = everyday_phrases.json; sourceTree = "<group>"; };
+		21466255AEE5EDF9FDD703E5 /* LessonTeachingVisuals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonTeachingVisuals.swift; sourceTree = "<group>"; };
+		229D8A78B92E2246E9338B95 /* SM2Scheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SM2Scheduler.swift; sourceTree = "<group>"; };
+		26B49943098933247526AE15 /* NeuralAudio */ = {isa = PBXFileReference; lastKnownFileType = folder; name = NeuralAudio; path = DeutschB1Coach/Resources/NeuralAudio; sourceTree = SOURCE_ROOT; };
+		27969FEBAE98AE3C126DAA5F /* orientation-general-176.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-general-176.png"; sourceTree = "<group>"; };
+		27BDA9FD02D8916BB961FBCB /* practical_missions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = practical_missions.json; sourceTree = "<group>"; };
+		29DF0AEB74DD47D745ACDA0E /* IntegrationCourseCurriculum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationCourseCurriculum.swift; sourceTree = "<group>"; };
+		310CD7F20B1A56C440920860 /* orientation-general-070.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-general-070.png"; sourceTree = "<group>"; };
+		3251A61B1EE4BF64B62FDF24 /* orientation-bb-08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-bb-08.png"; sourceTree = "<group>"; };
+		340DC05601681DEAF59E546D /* orientation-sl-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-sl-01.png"; sourceTree = "<group>"; };
+		341FFADC3D7E5151F65858B1 /* DBCNeuralTTSBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBCNeuralTTSBridge.h; sourceTree = "<group>"; };
+		34F6429F074FF3D26F57367F /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
+		3501AADF49D0C9E71BC6F69C /* orientation-he-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-he-01.png"; sourceTree = "<group>"; };
+		3552C4CDD4DEAA4A2DCE5C41 /* uk_translations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = uk_translations.json; sourceTree = "<group>"; };
+		3890E49792EC8256310D1F69 /* orientation-he-08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-he-08.png"; sourceTree = "<group>"; };
+		39B65B75D799C3A55C2BD732 /* NativeLearningDesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeLearningDesignSystem.swift; sourceTree = "<group>"; };
+		39EE12F82505AD24010028E8 /* CurriculumProgression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumProgression.swift; sourceTree = "<group>"; };
+		3D80E85D537CCB4A2D76A2F4 /* OnDeviceGermanVoiceRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnDeviceGermanVoiceRenderer.swift; sourceTree = "<group>"; };
+		3E46668F93C91BBD38CD0773 /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
+		3E53C674DD673D5DB50F8829 /* orientation-hb-08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-hb-08.png"; sourceTree = "<group>"; };
+		3E761B97A0BF0A9BFBEDC8D0 /* LessonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailView.swift; sourceTree = "<group>"; };
+		3EE16CEC6E4504BAF38891AE /* ko_translations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ko_translations.json; sourceTree = "<group>"; };
+		40092C0B117627F3F85A5A27 /* SkillDrillViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillDrillViews.swift; sourceTree = "<group>"; };
+		4098333DD00321814A2179C5 /* DeutschB1CoachApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeutschB1CoachApp.swift; sourceTree = "<group>"; };
+		423BF01A44288FA5D9E24330 /* orientation-general-209.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-general-209.png"; sourceTree = "<group>"; };
+		46D0D29C0A4FF175BCBAECF8 /* orientation-th-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-th-01.png"; sourceTree = "<group>"; };
+		474F52CB10C148B8523AC33A /* SpeechScorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechScorer.swift; sourceTree = "<group>"; };
+		47EF76C8997628DF3610011C /* orientation-st-08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-st-08.png"; sourceTree = "<group>"; };
+		48F539C99F60EB4CED55434A /* orientation-hh-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-hh-01.png"; sourceTree = "<group>"; };
+		492CC30C8BA484FE15260A4E /* mock_exam_b1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mock_exam_b1.json; sourceTree = "<group>"; };
+		498ACAA7E2FA35FCC4CD20D9 /* onnxruntime.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = onnxruntime.xcframework; path = DeutschB1Coach/Frameworks/onnxruntime.xcframework; sourceTree = "<group>"; };
+		4D4A8485534406613117E90B /* TeachingText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachingText.swift; sourceTree = "<group>"; };
+		4E44E0E5755BCC6CFBE32E81 /* MainFeatureTutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeatureTutorial.swift; sourceTree = "<group>"; };
+		4EAFFDB471F57823EA524E3C /* orientation-general-216.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-general-216.png"; sourceTree = "<group>"; };
+		508EF38806624C5D932A8906 /* ProductExperienceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductExperienceService.swift; sourceTree = "<group>"; };
+		50CE66F2D8800D30FD98DE5C /* DBCNeuralTTSBridge.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DBCNeuralTTSBridge.mm; sourceTree = "<group>"; };
+		512DBC65AFAF493A94C96AFF /* orientation-mv-08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-mv-08.png"; sourceTree = "<group>"; };
+		51B548322B98CA7A41999C0B /* ar_translations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ar_translations.json; sourceTree = "<group>"; };
+		52963397D351C6428A061959 /* tr_translations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = tr_translations.json; sourceTree = "<group>"; };
+		535EDCF8C3A364ABB69EB7A3 /* SM2SchedulerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SM2SchedulerTests.swift; sourceTree = "<group>"; };
+		54FB73696D73419FAAFCB63E /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		56F50BC7FBBB714FAE8C322F /* LessonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsView.swift; sourceTree = "<group>"; };
+		59741E5EC07F082101EFF125 /* DailyFocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyFocusView.swift; sourceTree = "<group>"; };
+		59D04AC982CCC8A38E7222BD /* orientation-rp-08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-rp-08.png"; sourceTree = "<group>"; };
+		5A06F35C9328F0411C401315 /* orientation-sl-08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-sl-08.png"; sourceTree = "<group>"; };
+		5BF49C363D6D12BF2D2B6E6B /* SpeakingCorrectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakingCorrectionView.swift; sourceTree = "<group>"; };
+		60E54B59A574A8CC933FE38C /* SimplifiedExplanationViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplifiedExplanationViews.swift; sourceTree = "<group>"; };
+		63E2BE793B5C7DE379588333 /* OrientationMockExam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationMockExam.swift; sourceTree = "<group>"; };
+		64824699ED28A04FAAD7837E /* orientation-ni-08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-ni-08.png"; sourceTree = "<group>"; };
+		651E6E61FEA2015ACCF249BB /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		67128605A38270EC233B62E4 /* DeutschB1CoachTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = DeutschB1CoachTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		68D54E7BD89E68D10B00AE14 /* ReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewModel.swift; sourceTree = "<group>"; };
+		6A62269B08AA3C9283092E8A /* CoachRoadJourneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachRoadJourneyView.swift; sourceTree = "<group>"; };
+		6A8D1A75B75872E7BACD4244 /* orientation-sh-08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-sh-08.png"; sourceTree = "<group>"; };
+		6AA6CF7A1001C19808F90EBE /* SimplifiedExplanationCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplifiedExplanationCatalog.swift; sourceTree = "<group>"; };
+		6AAC22CFC4BB72399229AE11 /* PlacementEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacementEngine.swift; sourceTree = "<group>"; };
+		6C93B94B7FB50A508AF73960 /* FluencyTaskCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluencyTaskCatalog.swift; sourceTree = "<group>"; };
+		6EF7EC8B0B886A3793BA1074 /* CoachMascot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachMascot.swift; sourceTree = "<group>"; };
+		72600DC302012AE42E1610DB /* quizzes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = quizzes.json; sourceTree = "<group>"; };
+		738CEE29EACC7E6718405D96 /* WritingPracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingPracticeView.swift; sourceTree = "<group>"; };
+		743D7B72369877DF897DBAA0 /* pt_translations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = pt_translations.json; sourceTree = "<group>"; };
+		7538942FB13BD66F8B12AFF9 /* ExamPrepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamPrepView.swift; sourceTree = "<group>"; };
+		75845270ECC33F9494602C36 /* orientation-general-130.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-general-130.png"; sourceTree = "<group>"; };
+		75910597DAFF826F64BCD0E2 /* SpeakingPracticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakingPracticeViewModel.swift; sourceTree = "<group>"; };
+		75B805895E2EA0F9FC9A132B /* DeutschB1Coach-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DeutschB1Coach-Bridging-Header.h"; sourceTree = "<group>"; };
+		76180B2F001B85B418E15DFB /* ru_translations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ru_translations.json; sourceTree = "<group>"; };
+		7AD3F568ACC9489D7E20D56D /* FirstLaunchTutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLaunchTutorialView.swift; sourceTree = "<group>"; };
+		7B265DC36F47418ABF7442B3 /* it_translations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = it_translations.json; sourceTree = "<group>"; };
+		7C39D47E0A9CEAF7F9840831 /* orientation-general-235.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-general-235.png"; sourceTree = "<group>"; };
+		817683B6743EE39BF95CF605 /* DeutschB1Coach.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = DeutschB1Coach.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		819007EDA43F488867ACFE41 /* orientation-nw-08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-nw-08.png"; sourceTree = "<group>"; };
+		83706BC4E34072C9F0BE59F3 /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
+		84DCA66C1F01D17C508F6B4C /* LearningVisuals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningVisuals.swift; sourceTree = "<group>"; };
+		857450D96230AA9E5601049D /* GermanSpeechService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GermanSpeechService.swift; sourceTree = "<group>"; };
+		85BE10AC081BA39C4CBF31BB /* MockExamModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockExamModels.swift; sourceTree = "<group>"; };
+		8817618E6D6BF9151D6162CB /* ti_translations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ti_translations.json; sourceTree = "<group>"; };
+		88A7077A0AE2E25AFD98D7BF /* id_translations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = id_translations.json; sourceTree = "<group>"; };
+		89D52725FCD5F86F7E471655 /* orientation-mv-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-mv-01.png"; sourceTree = "<group>"; };
+		8B5E01976685C2A2FFDCA067 /* vi_translations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = vi_translations.json; sourceTree = "<group>"; };
+		8B5FD0C7B1E91DB3F2502A43 /* TeachingLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachingLanguage.swift; sourceTree = "<group>"; };
+		8B61C84A92FDB127534F9B48 /* SpeechRecognitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionService.swift; sourceTree = "<group>"; };
+		8BF9A6F519DFF98629BC0AEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8DABD47DAC81460F48713651 /* orientation-sn-08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-sn-08.png"; sourceTree = "<group>"; };
+		8DE42C6C1F1A0FB8F7CCBC8C /* orientation-hh-08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-hh-08.png"; sourceTree = "<group>"; };
+		90C35BEDEC02B01273179833 /* orientation-th-08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-th-08.png"; sourceTree = "<group>"; };
+		90F863C9C1BD0C9A1878D3CE /* hi_translations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = hi_translations.json; sourceTree = "<group>"; };
+		93DB28E89E723725B3183175 /* CurriculumLibraryViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumLibraryViews.swift; sourceTree = "<group>"; };
+		9D9214F197348A6C865672F0 /* es_translations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = es_translations.json; sourceTree = "<group>"; };
+		A05DBB159C108DC6B7EE5A52 /* ContentLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentLoader.swift; sourceTree = "<group>"; };
+		A09FC15C458CF26372E44390 /* grammar.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = grammar.json; sourceTree = "<group>"; };
+		A0E440FC51F84D361ADB3488 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		A4A2DD263765C265F2220A1C /* amharic_translations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = amharic_translations.json; sourceTree = "<group>"; };
+		A68C6A1803AF7D0D5FEEF853 /* LearningRecordModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningRecordModels.swift; sourceTree = "<group>"; };
+		A6D864E61145EF66E2042DA9 /* FlashcardViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardViews.swift; sourceTree = "<group>"; };
+		ABDF91C0A9131873D30E98C4 /* lessons.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = lessons.json; sourceTree = "<group>"; };
+		ACF38D8E46E6DC4AFC313DE9 /* PracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeView.swift; sourceTree = "<group>"; };
+		AE89A571C05B8EB22821B0E4 /* orientation-bw-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-bw-01.png"; sourceTree = "<group>"; };
+		AEBE71AC438214B3E2BF1E95 /* orientation-rp-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-rp-01.png"; sourceTree = "<group>"; };
+		B08994450879D042E7E0110A /* FreeResponseEvaluator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeResponseEvaluator.swift; sourceTree = "<group>"; };
+		B1385EB1E02BD720B01D256D /* th_translations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = th_translations.json; sourceTree = "<group>"; };
+		B1C63B3BAF970AFBF7A33D52 /* orientation-sh-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-sh-01.png"; sourceTree = "<group>"; };
+		B64B7D762F7228E909D914C8 /* orientation-general-181.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-general-181.png"; sourceTree = "<group>"; };
+		B7C4ABDD22194FEE9559048E /* orientation-bw-08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-bw-08.png"; sourceTree = "<group>"; };
+		B9D99BBB317E6C994AA4070B /* OrientationQuestionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationQuestionRepository.swift; sourceTree = "<group>"; };
+		BE074A745BB76BBEC02EF8CA /* fr_translations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fr_translations.json; sourceTree = "<group>"; };
+		BFBF591D2D8136A7076E2E70 /* OrientationMockExamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationMockExamView.swift; sourceTree = "<group>"; };
+		BFEE9F95A3D34D2EE2806264 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		C0FFD95743982E545829B407 /* orientation-general-055.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-general-055.png"; sourceTree = "<group>"; };
+		C1A7D714F019B185EB217B75 /* orientation-hb-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-hb-01.png"; sourceTree = "<group>"; };
+		C387E031F2B95F3EC7FAEF2D /* orientation-ni-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-ni-01.png"; sourceTree = "<group>"; };
+		C58AF8919A9BD85939B776A5 /* IntegrationCourseViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationCourseViews.swift; sourceTree = "<group>"; };
+		C7A6023AA2AA508FEC4129CC /* vocab_a2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = vocab_a2.json; sourceTree = "<group>"; };
+		C8A87D6F491939092C93D50E /* CurriculumIntegrityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumIntegrityTests.swift; sourceTree = "<group>"; };
+		CAFCE2DE8D9DAE54841F8DA5 /* StudyReminderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyReminderService.swift; sourceTree = "<group>"; };
+		CB1198782FA80C9B21D22891 /* PremiumAccessService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumAccessService.swift; sourceTree = "<group>"; };
+		CC19A3BECCA0FCBC045A99B5 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		D1AA9BB2E6A821B99880701E /* NeuralTTSModel */ = {isa = PBXFileReference; lastKnownFileType = folder; name = NeuralTTSModel; path = DeutschB1Coach/Resources/NeuralTTSModel; sourceTree = SOURCE_ROOT; };
+		D59048908434E771793120DC /* orientation-be-08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-be-08.png"; sourceTree = "<group>"; };
+		D8918FC29BF304E4ECC8A066 /* orientation-bb-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-bb-01.png"; sourceTree = "<group>"; };
+		D925178A4EB0931FFA1C4740 /* pl_translations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = pl_translations.json; sourceTree = "<group>"; };
+		DA1FFA1F34B59A851E127544 /* PracticalMissionViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticalMissionViews.swift; sourceTree = "<group>"; };
+		DA6C78B0C6DD6909CF70856F /* TopicLessonViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicLessonViews.swift; sourceTree = "<group>"; };
+		DB995AB432744E8BF8E378D0 /* SpeakingPracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakingPracticeView.swift; sourceTree = "<group>"; };
+		DD6B2F76964FD70F9AD27299 /* nl_translations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = nl_translations.json; sourceTree = "<group>"; };
+		DDC56B6BC3A22A0475A783EE /* OnboardingPlacementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPlacementView.swift; sourceTree = "<group>"; };
+		E7BA1D314EFDE112A8C6DEFA /* vocab_b1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = vocab_b1.json; sourceTree = "<group>"; };
+		E844DF4A3A6F97D20890E5B8 /* orientation-be-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-be-01.png"; sourceTree = "<group>"; };
+		E9FDF984A1B953BBE62BDC64 /* orientation-sn-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-sn-01.png"; sourceTree = "<group>"; };
+		EB71CEB6ED0A6FBDAA002BB4 /* FreeResponseEvaluatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeResponseEvaluatorTests.swift; sourceTree = "<group>"; };
+		EB7DB044163C226AF5B4B072 /* PremiumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumView.swift; sourceTree = "<group>"; };
+		ECFD668306F53229585038CA /* JourneyEntryViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyEntryViews.swift; sourceTree = "<group>"; };
+		EFC52308BEF76C0F9CF590C3 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		F025D636C42BBC36C5BBA496 /* UserProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProgress.swift; sourceTree = "<group>"; };
+		F0858687DE61C533135977FD /* orientation-general-187.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-general-187.png"; sourceTree = "<group>"; };
+		F0A4E1BBC3F69837BAAC33B9 /* SpeechScorerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechScorerTests.swift; sourceTree = "<group>"; };
+		F0B7AC5EB56EF7C400964F6A /* ja_translations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ja_translations.json; sourceTree = "<group>"; };
+		F205D39CD1FAEFF44B46F222 /* orientation-general-021.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-general-021.png"; sourceTree = "<group>"; };
+		F7396B2804C686115F58E94C /* ProgressService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressService.swift; sourceTree = "<group>"; };
+		F762A48DE2819388595A6B0B /* CurriculumModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumModels.swift; sourceTree = "<group>"; };
+		F8856098D9057791E8A96875 /* zh-Hans_translations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "zh-Hans_translations.json"; sourceTree = "<group>"; };
+		FCFAB1C05EE8417E20590EFE /* orientation-by-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orientation-by-01.png"; sourceTree = "<group>"; };
+		FDFE5D5453D611E84DFB2B12 /* EverydayPhrasebookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EverydayPhrasebookView.swift; sourceTree = "<group>"; };
+		FF6798F34E6AA4DB43269D5D /* sherpa-onnx.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = "sherpa-onnx.xcframework"; path = "DeutschB1Coach/Frameworks/sherpa-onnx.xcframework"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD0CCDABF47292D5B9903DE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85875F48F2EDC0D948E24376 /* sherpa-onnx.xcframework in Frameworks */,
+				64870B6179D1B73E0F11109E /* onnxruntime.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01BC1CBBD94034C5ECDADE90 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C8A87D6F491939092C93D50E /* CurriculumIntegrityTests.swift */,
+				EB71CEB6ED0A6FBDAA002BB4 /* FreeResponseEvaluatorTests.swift */,
+				535EDCF8C3A364ABB69EB7A3 /* SM2SchedulerTests.swift */,
+				F0A4E1BBC3F69837BAAC33B9 /* SpeechScorerTests.swift */,
+			);
+			name = Tests;
+			path = DeutschB1Coach/Tests;
+			sourceTree = "<group>";
+		};
+		05CE60917BCE7528946E397B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A05DBB159C108DC6B7EE5A52 /* ContentLoader.swift */,
+				076286900F54C95B5114458C /* CurriculumFactory.swift */,
+				39EE12F82505AD24010028E8 /* CurriculumProgression.swift */,
+				1651E5C73A306C4E5494F037 /* ExamReadiness.swift */,
+				6C93B94B7FB50A508AF73960 /* FluencyTaskCatalog.swift */,
+				B08994450879D042E7E0110A /* FreeResponseEvaluator.swift */,
+				857450D96230AA9E5601049D /* GermanSpeechService.swift */,
+				29DF0AEB74DD47D745ACDA0E /* IntegrationCourseCurriculum.swift */,
+				3D80E85D537CCB4A2D76A2F4 /* OnDeviceGermanVoiceRenderer.swift */,
+				63E2BE793B5C7DE379588333 /* OrientationMockExam.swift */,
+				B9D99BBB317E6C994AA4070B /* OrientationQuestionRepository.swift */,
+				6AAC22CFC4BB72399229AE11 /* PlacementEngine.swift */,
+				CB1198782FA80C9B21D22891 /* PremiumAccessService.swift */,
+				508EF38806624C5D932A8906 /* ProductExperienceService.swift */,
+				F7396B2804C686115F58E94C /* ProgressService.swift */,
+				6AA6CF7A1001C19808F90EBE /* SimplifiedExplanationCatalog.swift */,
+				229D8A78B92E2246E9338B95 /* SM2Scheduler.swift */,
+				8B61C84A92FDB127534F9B48 /* SpeechRecognitionService.swift */,
+				474F52CB10C148B8523AC33A /* SpeechScorer.swift */,
+				CAFCE2DE8D9DAE54841F8DA5 /* StudyReminderService.swift */,
+				0628E91AACF9DD542ED3EBB6 /* VocabularyStudyProgress.swift */,
+			);
+			name = Services;
+			path = DeutschB1Coach/Services;
+			sourceTree = "<group>";
+		};
+		0A01A3F6BAED22410B5D81EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				498ACAA7E2FA35FCC4CD20D9 /* onnxruntime.xcframework */,
+				FF6798F34E6AA4DB43269D5D /* sherpa-onnx.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0D6B3E2277C5C8BC6C30D02D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F762A48DE2819388595A6B0B /* CurriculumModels.swift */,
+				A68C6A1803AF7D0D5FEEF853 /* LearningRecordModels.swift */,
+				85BE10AC081BA39C4CBF31BB /* MockExamModels.swift */,
+				00B3C6ACB2A9589FAF1EE5B2 /* ReviewModels.swift */,
+				8B5FD0C7B1E91DB3F2502A43 /* TeachingLanguage.swift */,
+				F025D636C42BBC36C5BBA496 /* UserProgress.swift */,
+			);
+			name = Models;
+			path = DeutschB1Coach/Models;
+			sourceTree = "<group>";
+		};
+		10010952BDEE73790BBF911B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				4098333DD00321814A2179C5 /* DeutschB1CoachApp.swift */,
+			);
+			name = App;
+			path = DeutschB1Coach/App;
+			sourceTree = "<group>";
+		};
+		327BAC5D24FC8F47438CBA18 = {
+			isa = PBXGroup;
+			children = (
+				26B49943098933247526AE15 /* NeuralAudio */,
+				D1AA9BB2E6A821B99880701E /* NeuralTTSModel */,
+				10010952BDEE73790BBF911B /* App */,
+				626A55D2266A5FDC8287B00C /* Bridging */,
+				0D6B3E2277C5C8BC6C30D02D /* Models */,
+				B5DA038F3086913B464F2A07 /* Resources */,
+				05CE60917BCE7528946E397B /* Services */,
+				01BC1CBBD94034C5ECDADE90 /* Tests */,
+				B379085043BD270297B61B9D /* ViewModels */,
+				42BFC9D95816DC3BDF112407 /* Views */,
+				0A01A3F6BAED22410B5D81EA /* Frameworks */,
+				3A2954F53BC39BBB04FF781D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3A2954F53BC39BBB04FF781D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				817683B6743EE39BF95CF605 /* DeutschB1Coach.app */,
+				67128605A38270EC233B62E4 /* DeutschB1CoachTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		42BFC9D95816DC3BDF112407 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6EF7EC8B0B886A3793BA1074 /* CoachMascot.swift */,
+				6A62269B08AA3C9283092E8A /* CoachRoadJourneyView.swift */,
+				93DB28E89E723725B3183175 /* CurriculumLibraryViews.swift */,
+				59741E5EC07F082101EFF125 /* DailyFocusView.swift */,
+				651E6E61FEA2015ACCF249BB /* DashboardView.swift */,
+				3E46668F93C91BBD38CD0773 /* DesignSystem.swift */,
+				FDFE5D5453D611E84DFB2B12 /* EverydayPhrasebookView.swift */,
+				7538942FB13BD66F8B12AFF9 /* ExamPrepView.swift */,
+				1184AF0D492E918D8CF85BFB /* FirstLaunchLanguageView.swift */,
+				7AD3F568ACC9489D7E20D56D /* FirstLaunchTutorialView.swift */,
+				A6D864E61145EF66E2042DA9 /* FlashcardViews.swift */,
+				C58AF8919A9BD85939B776A5 /* IntegrationCourseViews.swift */,
+				ECFD668306F53229585038CA /* JourneyEntryViews.swift */,
+				84DCA66C1F01D17C508F6B4C /* LearningVisuals.swift */,
+				3E761B97A0BF0A9BFBEDC8D0 /* LessonDetailView.swift */,
+				09CE1D75B9D174D603DCA4D5 /* LessonMemoryVisual.swift */,
+				56F50BC7FBBB714FAE8C322F /* LessonsView.swift */,
+				21466255AEE5EDF9FDD703E5 /* LessonTeachingVisuals.swift */,
+				4E44E0E5755BCC6CFBE32E81 /* MainFeatureTutorial.swift */,
+				39B65B75D799C3A55C2BD732 /* NativeLearningDesignSystem.swift */,
+				DDC56B6BC3A22A0475A783EE /* OnboardingPlacementView.swift */,
+				BFBF591D2D8136A7076E2E70 /* OrientationMockExamView.swift */,
+				DA1FFA1F34B59A851E127544 /* PracticalMissionViews.swift */,
+				ACF38D8E46E6DC4AFC313DE9 /* PracticeView.swift */,
+				EB7DB044163C226AF5B4B072 /* PremiumView.swift */,
+				A0E440FC51F84D361ADB3488 /* ProgressView.swift */,
+				54FB73696D73419FAAFCB63E /* QuizView.swift */,
+				07F1823AFCB8902DA973E2A0 /* ReviewView.swift */,
+				34F6429F074FF3D26F57367F /* RootTabView.swift */,
+				EFC52308BEF76C0F9CF590C3 /* SettingsView.swift */,
+				60E54B59A574A8CC933FE38C /* SimplifiedExplanationViews.swift */,
+				40092C0B117627F3F85A5A27 /* SkillDrillViews.swift */,
+				5BF49C363D6D12BF2D2B6E6B /* SpeakingCorrectionView.swift */,
+				DB995AB432744E8BF8E378D0 /* SpeakingPracticeView.swift */,
+				4D4A8485534406613117E90B /* TeachingText.swift */,
+				DA6C78B0C6DD6909CF70856F /* TopicLessonViews.swift */,
+				09AFC3D4EEB70EE3D3F56441 /* VocabularyMatchGameView.swift */,
+				738CEE29EACC7E6718405D96 /* WritingPracticeView.swift */,
+			);
+			name = Views;
+			path = DeutschB1Coach/Views;
+			sourceTree = "<group>";
+		};
+		626A55D2266A5FDC8287B00C /* Bridging */ = {
+			isa = PBXGroup;
+			children = (
+				341FFADC3D7E5151F65858B1 /* DBCNeuralTTSBridge.h */,
+				50CE66F2D8800D30FD98DE5C /* DBCNeuralTTSBridge.mm */,
+				75B805895E2EA0F9FC9A132B /* DeutschB1Coach-Bridging-Header.h */,
+			);
+			name = Bridging;
+			path = DeutschB1Coach/Bridging;
+			sourceTree = "<group>";
+		};
+		8ADAB2D1F21881E4CB00EC92 /* OrientationImages */ = {
+			isa = PBXGroup;
+			children = (
+				D8918FC29BF304E4ECC8A066 /* orientation-bb-01.png */,
+				3251A61B1EE4BF64B62FDF24 /* orientation-bb-08.png */,
+				E844DF4A3A6F97D20890E5B8 /* orientation-be-01.png */,
+				D59048908434E771793120DC /* orientation-be-08.png */,
+				AE89A571C05B8EB22821B0E4 /* orientation-bw-01.png */,
+				B7C4ABDD22194FEE9559048E /* orientation-bw-08.png */,
+				FCFAB1C05EE8417E20590EFE /* orientation-by-01.png */,
+				0F350E70B49AAB383172255F /* orientation-by-08.png */,
+				F205D39CD1FAEFF44B46F222 /* orientation-general-021.png */,
+				C0FFD95743982E545829B407 /* orientation-general-055.png */,
+				310CD7F20B1A56C440920860 /* orientation-general-070.png */,
+				75845270ECC33F9494602C36 /* orientation-general-130.png */,
+				27969FEBAE98AE3C126DAA5F /* orientation-general-176.png */,
+				B64B7D762F7228E909D914C8 /* orientation-general-181.png */,
+				F0858687DE61C533135977FD /* orientation-general-187.png */,
+				423BF01A44288FA5D9E24330 /* orientation-general-209.png */,
+				4EAFFDB471F57823EA524E3C /* orientation-general-216.png */,
+				1F9F7B84B619B3F6098699B2 /* orientation-general-226.png */,
+				7C39D47E0A9CEAF7F9840831 /* orientation-general-235.png */,
+				C1A7D714F019B185EB217B75 /* orientation-hb-01.png */,
+				3E53C674DD673D5DB50F8829 /* orientation-hb-08.png */,
+				3501AADF49D0C9E71BC6F69C /* orientation-he-01.png */,
+				3890E49792EC8256310D1F69 /* orientation-he-08.png */,
+				48F539C99F60EB4CED55434A /* orientation-hh-01.png */,
+				8DE42C6C1F1A0FB8F7CCBC8C /* orientation-hh-08.png */,
+				89D52725FCD5F86F7E471655 /* orientation-mv-01.png */,
+				512DBC65AFAF493A94C96AFF /* orientation-mv-08.png */,
+				C387E031F2B95F3EC7FAEF2D /* orientation-ni-01.png */,
+				64824699ED28A04FAAD7837E /* orientation-ni-08.png */,
+				1BA641EF7ABBEEF1A8259BED /* orientation-nw-01.png */,
+				819007EDA43F488867ACFE41 /* orientation-nw-08.png */,
+				AEBE71AC438214B3E2BF1E95 /* orientation-rp-01.png */,
+				59D04AC982CCC8A38E7222BD /* orientation-rp-08.png */,
+				B1C63B3BAF970AFBF7A33D52 /* orientation-sh-01.png */,
+				6A8D1A75B75872E7BACD4244 /* orientation-sh-08.png */,
+				340DC05601681DEAF59E546D /* orientation-sl-01.png */,
+				5A06F35C9328F0411C401315 /* orientation-sl-08.png */,
+				E9FDF984A1B953BBE62BDC64 /* orientation-sn-01.png */,
+				8DABD47DAC81460F48713651 /* orientation-sn-08.png */,
+				09F275F583A5755F4C2199ED /* orientation-st-01.png */,
+				47EF76C8997628DF3610011C /* orientation-st-08.png */,
+				46D0D29C0A4FF175BCBAECF8 /* orientation-th-01.png */,
+				90C35BEDEC02B01273179833 /* orientation-th-08.png */,
+			);
+			path = OrientationImages;
+			sourceTree = "<group>";
+		};
+		B379085043BD270297B61B9D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BFEE9F95A3D34D2EE2806264 /* DashboardViewModel.swift */,
+				0EBA96B9666CE44EA8D581E6 /* LessonViewModel.swift */,
+				83706BC4E34072C9F0BE59F3 /* QuizViewModel.swift */,
+				68D54E7BD89E68D10B00AE14 /* ReviewViewModel.swift */,
+				75910597DAFF826F64BCD0E2 /* SpeakingPracticeViewModel.swift */,
+			);
+			name = ViewModels;
+			path = DeutschB1Coach/ViewModels;
+			sourceTree = "<group>";
+		};
+		B5DA038F3086913B464F2A07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A4A2DD263765C265F2220A1C /* amharic_translations.json */,
+				51B548322B98CA7A41999C0B /* ar_translations.json */,
+				8BF9A6F519DFF98629BC0AEE /* Assets.xcassets */,
+				9D9214F197348A6C865672F0 /* es_translations.json */,
+				1FE0318801939F57AA4DF589 /* everyday_phrases.json */,
+				BE074A745BB76BBEC02EF8CA /* fr_translations.json */,
+				A09FC15C458CF26372E44390 /* grammar.json */,
+				90F863C9C1BD0C9A1878D3CE /* hi_translations.json */,
+				88A7077A0AE2E25AFD98D7BF /* id_translations.json */,
+				7B265DC36F47418ABF7442B3 /* it_translations.json */,
+				F0B7AC5EB56EF7C400964F6A /* ja_translations.json */,
+				3EE16CEC6E4504BAF38891AE /* ko_translations.json */,
+				ABDF91C0A9131873D30E98C4 /* lessons.json */,
+				492CC30C8BA484FE15260A4E /* mock_exam_b1.json */,
+				DD6B2F76964FD70F9AD27299 /* nl_translations.json */,
+				06ABC36E27207E8C656D1A91 /* orientation_questions.json */,
+				D925178A4EB0931FFA1C4740 /* pl_translations.json */,
+				27BDA9FD02D8916BB961FBCB /* practical_missions.json */,
+				CC19A3BECCA0FCBC045A99B5 /* PrivacyInfo.xcprivacy */,
+				743D7B72369877DF897DBAA0 /* pt_translations.json */,
+				72600DC302012AE42E1610DB /* quizzes.json */,
+				76180B2F001B85B418E15DFB /* ru_translations.json */,
+				B1385EB1E02BD720B01D256D /* th_translations.json */,
+				8817618E6D6BF9151D6162CB /* ti_translations.json */,
+				52963397D351C6428A061959 /* tr_translations.json */,
+				3552C4CDD4DEAA4A2DCE5C41 /* uk_translations.json */,
+				8B5E01976685C2A2FFDCA067 /* vi_translations.json */,
+				1C07349743FABA78402D5B25 /* vocab_a1.json */,
+				C7A6023AA2AA508FEC4129CC /* vocab_a2.json */,
+				E7BA1D314EFDE112A8C6DEFA /* vocab_b1.json */,
+				F8856098D9057791E8A96875 /* zh-Hans_translations.json */,
+				8ADAB2D1F21881E4CB00EC92 /* OrientationImages */,
+			);
+			name = Resources;
+			path = DeutschB1Coach/Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		06814117996E514C6F98BB3A /* DeutschB1Coach */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25A5CF59C7F936CFCD9E8A46 /* Build configuration list for PBXNativeTarget "DeutschB1Coach" */;
+			buildPhases = (
+				DD99316D11788CA3F1C393FE /* Sources */,
+				18CD973CEE4A27E61F9C2664 /* Resources */,
+				CD0CCDABF47292D5B9903DE7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DeutschB1Coach;
+			packageProductDependencies = (
+			);
+			productName = DeutschB1Coach;
+			productReference = 817683B6743EE39BF95CF605 /* DeutschB1Coach.app */;
+			productType = "com.apple.product-type.application";
+		};
+		910459F5ADF9658C4605BE48 /* DeutschB1CoachTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5C03F7CE4655DEC4641D3E7 /* Build configuration list for PBXNativeTarget "DeutschB1CoachTests" */;
+			buildPhases = (
+				34203C266662023C94AE934F /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				70F5D244014A2BBFD565D0C1 /* PBXTargetDependency */,
+			);
+			name = DeutschB1CoachTests;
+			packageProductDependencies = (
+			);
+			productName = DeutschB1CoachTests;
+			productReference = 67128605A38270EC233B62E4 /* DeutschB1CoachTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2017D9849A1B231C1377162D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					06814117996E514C6F98BB3A = {
+						DevelopmentTeam = B7JKRHXD23;
+						ProvisioningStyle = Automatic;
+					};
+					910459F5ADF9658C4605BE48 = {
+						DevelopmentTeam = B7JKRHXD23;
+					};
+				};
+			};
+			buildConfigurationList = 0CA7E86ED268A57A310E4663 /* Build configuration list for PBXProject "DeutschB1Coach" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 327BAC5D24FC8F47438CBA18;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 3A2954F53BC39BBB04FF781D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				06814117996E514C6F98BB3A /* DeutschB1Coach */,
+				910459F5ADF9658C4605BE48 /* DeutschB1CoachTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18CD973CEE4A27E61F9C2664 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				352E5E8D76469DCC71A06C28 /* Assets.xcassets in Resources */,
+				0C05258BB13B68CDD1543876 /* NeuralAudio in Resources */,
+				90CB00C2987EDB84C101ECB6 /* NeuralTTSModel in Resources */,
+				16C3E6F54FAC375356556E20 /* PrivacyInfo.xcprivacy in Resources */,
+				9070112C1EA477E0E69B8D9B /* amharic_translations.json in Resources */,
+				D465E12383BA969595B9831C /* ar_translations.json in Resources */,
+				24BF6A19EA3380FACF41A2D5 /* es_translations.json in Resources */,
+				EFB47C6F9A6E8CC6F2331205 /* everyday_phrases.json in Resources */,
+				B3B62EA23F626531CBE7996F /* fr_translations.json in Resources */,
+				AAC318FF76E5D40178436269 /* grammar.json in Resources */,
+				6EE0B5498D421C08D8430C17 /* hi_translations.json in Resources */,
+				DA57D8FD7C4BAC26D25D603A /* id_translations.json in Resources */,
+				C2FB76F8A71BB6343491E340 /* it_translations.json in Resources */,
+				C8ED2CEF69EBD17E37EA2112 /* ja_translations.json in Resources */,
+				3FA0D9F37DE392BA388F051E /* ko_translations.json in Resources */,
+				FD32DFA72B5B4AB5B425661B /* lessons.json in Resources */,
+				33DA0B5BE6976804769DDEA6 /* mock_exam_b1.json in Resources */,
+				BA36F384D2D695377A56A87E /* nl_translations.json in Resources */,
+				11E929C3F9744E38111AD035 /* orientation-bb-01.png in Resources */,
+				99AFE9E4CAB9D1BD8A53A84B /* orientation-bb-08.png in Resources */,
+				4CCD030529CFB03A0CDBD679 /* orientation-be-01.png in Resources */,
+				CB42D0ACA29971F5AA5BBF9B /* orientation-be-08.png in Resources */,
+				2E5AD49094408DC26D855C69 /* orientation-bw-01.png in Resources */,
+				88828E1FD64D5FA52B3D38F5 /* orientation-bw-08.png in Resources */,
+				0700FBDBAAC59B8D2BE207C5 /* orientation-by-01.png in Resources */,
+				B139516E354337DB63A2D90E /* orientation-by-08.png in Resources */,
+				785FA312A6CC76F826DA5808 /* orientation-general-021.png in Resources */,
+				6671A02645A26A5540606F23 /* orientation-general-055.png in Resources */,
+				D66712E5D18F2B7393F5B297 /* orientation-general-070.png in Resources */,
+				970C555B1BDF1A2C7B08DBD8 /* orientation-general-130.png in Resources */,
+				0F32BDA9AEC866B03C371BD9 /* orientation-general-176.png in Resources */,
+				5BDC4E23B551CC900E78F7FF /* orientation-general-181.png in Resources */,
+				8752A3FA7F9FCCD68E7DFC2A /* orientation-general-187.png in Resources */,
+				0D9756408201FBF71E663B69 /* orientation-general-209.png in Resources */,
+				EBEF10C733BDCF195F7875EF /* orientation-general-216.png in Resources */,
+				AE9466ED4C4B22ED8751EDBC /* orientation-general-226.png in Resources */,
+				E643D77B7A4D3ED8FD33F0D2 /* orientation-general-235.png in Resources */,
+				CEF5732348E3E7FF1E5A722A /* orientation-hb-01.png in Resources */,
+				C9444D4E1E38EDBB27909C6F /* orientation-hb-08.png in Resources */,
+				78E629ECEE3C43842CBA1077 /* orientation-he-01.png in Resources */,
+				27C64AEC8353A88E9A830613 /* orientation-he-08.png in Resources */,
+				020ADE2617DFA954ECDCA1A0 /* orientation-hh-01.png in Resources */,
+				C268FC6BA37979B4B88C0322 /* orientation-hh-08.png in Resources */,
+				24497E6AEEDC7634C66BA4CD /* orientation-mv-01.png in Resources */,
+				F08C40D3928D5BC21035941A /* orientation-mv-08.png in Resources */,
+				288F6F570F68EA273A9F0C6F /* orientation-ni-01.png in Resources */,
+				446A8BFF8AD896D8CE249B60 /* orientation-ni-08.png in Resources */,
+				726EB679E9EE8194D76C752D /* orientation-nw-01.png in Resources */,
+				C06634C8DD53441C169F1E27 /* orientation-nw-08.png in Resources */,
+				45BC9EFF97409C7AA1B7CF57 /* orientation-rp-01.png in Resources */,
+				39C08D274A49A26139A5BEF3 /* orientation-rp-08.png in Resources */,
+				7CF54E05A255CBB5019332F6 /* orientation-sh-01.png in Resources */,
+				3898EE3B293D233C051FE6D9 /* orientation-sh-08.png in Resources */,
+				B2C9DD02A6A0325FF055C77D /* orientation-sl-01.png in Resources */,
+				4F0FA2E755838351D1A0D3D9 /* orientation-sl-08.png in Resources */,
+				C86D5FF11DC9E6E24030FB73 /* orientation-sn-01.png in Resources */,
+				E5A86518B34BC025F5331329 /* orientation-sn-08.png in Resources */,
+				DC942A1517335288CE27B4F2 /* orientation-st-01.png in Resources */,
+				3FD3303102E28F92FBAE3299 /* orientation-st-08.png in Resources */,
+				ADB503071FDC08E5A66977ED /* orientation-th-01.png in Resources */,
+				D979002DF2F211686B7CB93E /* orientation-th-08.png in Resources */,
+				ABB239913A55D45396F80AD4 /* orientation_questions.json in Resources */,
+				B9B711B9BA21E94B4DBAD92E /* pl_translations.json in Resources */,
+				7474BB230A8CD8E1E3D91915 /* practical_missions.json in Resources */,
+				5667BAD16EED964307DE0CEF /* pt_translations.json in Resources */,
+				9FEFCFDA3F5E8B86F68D923C /* quizzes.json in Resources */,
+				B1C30A3E617B855F8C4C4A92 /* ru_translations.json in Resources */,
+				BB2E2E403B4127DDC99BE318 /* th_translations.json in Resources */,
+				8B14E4D73532FB05C2F38048 /* ti_translations.json in Resources */,
+				6D3B531E3D610464136E3C5D /* tr_translations.json in Resources */,
+				4733FBD679E252DADB480484 /* uk_translations.json in Resources */,
+				67372F33EF6715D88C768B8C /* vi_translations.json in Resources */,
+				EFFF37AD441481C0A2D901AA /* vocab_a1.json in Resources */,
+				C14A8B0B22D880F43E8EBFB5 /* vocab_a2.json in Resources */,
+				226801C8E3264463A072E13B /* vocab_b1.json in Resources */,
+				FABF2EED3E96A2B9906F0CA2 /* zh-Hans_translations.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		34203C266662023C94AE934F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2995A31F331EA10BD5C175E0 /* CurriculumIntegrityTests.swift in Sources */,
+				A57C089F60A150D62BD76869 /* FreeResponseEvaluatorTests.swift in Sources */,
+				404B684361E0C0719FFAF8E2 /* SM2SchedulerTests.swift in Sources */,
+				CBDC11C01BDCDFCE30A847BC /* SpeechScorerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD99316D11788CA3F1C393FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F36A0C4A67DAD9E153AEA30 /* CoachMascot.swift in Sources */,
+				9E450F179A76C6715B96266F /* CoachRoadJourneyView.swift in Sources */,
+				61AC43578B64D2153B4510DC /* ContentLoader.swift in Sources */,
+				2AE74843E245D2FE965C35C7 /* CurriculumFactory.swift in Sources */,
+				22985036AC7C13495CFB5241 /* CurriculumLibraryViews.swift in Sources */,
+				0826CC1720A93E6AC9A4D8AF /* CurriculumModels.swift in Sources */,
+				97508D0FD250527855583C57 /* CurriculumProgression.swift in Sources */,
+				3343273DD577CD22D0BA8D50 /* DBCNeuralTTSBridge.mm in Sources */,
+				E3E4EB4031D344222CA0796C /* DailyFocusView.swift in Sources */,
+				342B3D4967AE771DAE15591D /* DashboardView.swift in Sources */,
+				DDEB88CB195AC305E7E6533A /* DashboardViewModel.swift in Sources */,
+				5286E15699A99187FD889955 /* DesignSystem.swift in Sources */,
+				2A6D8662F67E648D49A97246 /* DeutschB1CoachApp.swift in Sources */,
+				E8516FB327742B8AFA881BDD /* EverydayPhrasebookView.swift in Sources */,
+				63A0F1C9837C216247FD40A7 /* ExamPrepView.swift in Sources */,
+				B1E0CDE37C46475A2C56BD24 /* ExamReadiness.swift in Sources */,
+				6295283B032A40795156DDFF /* FirstLaunchLanguageView.swift in Sources */,
+				3699BC7375212169CF9E40D9 /* FirstLaunchTutorialView.swift in Sources */,
+				488F4C2A142240076DA42A9D /* FlashcardViews.swift in Sources */,
+				ED727960C40E862EB358A3D4 /* FluencyTaskCatalog.swift in Sources */,
+				F4471302BBEC2BF219297917 /* FreeResponseEvaluator.swift in Sources */,
+				0D800D8AC6047382FE65864F /* GermanSpeechService.swift in Sources */,
+				384AA347B019AC4BF0AC0BE9 /* IntegrationCourseCurriculum.swift in Sources */,
+				D1C6A424D723122700200EAB /* IntegrationCourseViews.swift in Sources */,
+				FBDE575F175CF7AD61A60564 /* JourneyEntryViews.swift in Sources */,
+				CF09F14F95F8FDFC67ECF8EC /* LearningRecordModels.swift in Sources */,
+				2C58AD3001431DF732BDB868 /* LearningVisuals.swift in Sources */,
+				61B489AF0CD30F25F7E73FAB /* LessonDetailView.swift in Sources */,
+				044F6DB8D8374F62497526C8 /* LessonMemoryVisual.swift in Sources */,
+				E8E44022DCD5025183077D9F /* LessonTeachingVisuals.swift in Sources */,
+				1D064AB2BF2141310187D7FB /* LessonViewModel.swift in Sources */,
+				93B9885C4EF1BE90D6C28BDF /* LessonsView.swift in Sources */,
+				8BF22565DAB16B69B60E0648 /* MainFeatureTutorial.swift in Sources */,
+				A5169D924CA4F378FE42D96F /* MockExamModels.swift in Sources */,
+				D9BBC9C30FC3E4B73F4AA7CE /* NativeLearningDesignSystem.swift in Sources */,
+				7B1120540AEA22191F92D103 /* OnDeviceGermanVoiceRenderer.swift in Sources */,
+				E253149C7569BCB360EDE806 /* OnboardingPlacementView.swift in Sources */,
+				962E3660FFBAD6D021A87F2B /* OrientationMockExam.swift in Sources */,
+				53C623D5BB1092C0F00BC430 /* OrientationMockExamView.swift in Sources */,
+				D567D87474231CDCFF8D1FDD /* OrientationQuestionRepository.swift in Sources */,
+				A79B996C316D301C1F63DE80 /* PlacementEngine.swift in Sources */,
+				2DAD6834BCEC80047B9E6961 /* PracticalMissionViews.swift in Sources */,
+				1D673CE0D1605A2E5387A16F /* PracticeView.swift in Sources */,
+				798E7D0F4B41F4707BFF1CFB /* PremiumAccessService.swift in Sources */,
+				AE612E90494188EE3C4C7E2A /* PremiumView.swift in Sources */,
+				02269AC8944EF7F87C911B2B /* ProductExperienceService.swift in Sources */,
+				2DA0882021986FCD3BCD266E /* ProgressService.swift in Sources */,
+				F714F96E695A2117B7111F23 /* ProgressView.swift in Sources */,
+				DF75C1B28BFE357FB2D689A7 /* QuizView.swift in Sources */,
+				7FF710D62F6AC54CF3C30A67 /* QuizViewModel.swift in Sources */,
+				04A298DB88E186C42702B292 /* ReviewModels.swift in Sources */,
+				060040DE8BFC2188C8E152FF /* ReviewView.swift in Sources */,
+				411CC2FF6A9D51D416C9EAF6 /* ReviewViewModel.swift in Sources */,
+				3131F5137022C35B4687485F /* RootTabView.swift in Sources */,
+				255D1592EB3010BBFC2809FB /* SM2Scheduler.swift in Sources */,
+				065036F6BAE36D8D67B84C95 /* SettingsView.swift in Sources */,
+				95958DC70E9D633162355992 /* SimplifiedExplanationCatalog.swift in Sources */,
+				D971ED0FE51A6F9C91F9E725 /* SimplifiedExplanationViews.swift in Sources */,
+				A9AFB44F98E39684A34B4D64 /* SkillDrillViews.swift in Sources */,
+				46532C61AB83CD3F9CB30630 /* SpeakingCorrectionView.swift in Sources */,
+				90663EE411AEACC3C4BAF911 /* SpeakingPracticeView.swift in Sources */,
+				CF2F65FF76D57096BB70B390 /* SpeakingPracticeViewModel.swift in Sources */,
+				8A934F795697971F10167C0B /* SpeechRecognitionService.swift in Sources */,
+				3B053CEBAB6DB9D18D0B6DAB /* SpeechScorer.swift in Sources */,
+				02B337CD92F7631E9E1BFEDC /* StudyReminderService.swift in Sources */,
+				92E2DDADE317991F789167E0 /* TeachingLanguage.swift in Sources */,
+				4CCAA24A815FC90C5A7EACD0 /* TeachingText.swift in Sources */,
+				DB8372EF6F3E5B1E23276309 /* TopicLessonViews.swift in Sources */,
+				5BFA5EE823B1637602376F57 /* UserProgress.swift in Sources */,
+				C40BFFE6D5C210AE9B00F518 /* VocabularyMatchGameView.swift in Sources */,
+				D762149ADCACD47CC15C8DEF /* VocabularyStudyProgress.swift in Sources */,
+				B07B913DE64E8F5DC720971F /* WritingPracticeView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		70F5D244014A2BBFD565D0C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 06814117996E514C6F98BB3A /* DeutschB1Coach */;
+			targetProxy = F7B96D0EDD36D47E563A21D3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1E2E8E4D60DD51BA146B1A1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_DEBUG_DYLIB = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"DeutschB1Coach/Frameworks\"",
+				);
+				INFOPLIST_FILE = DeutschB1Coach/Generated/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.faysel.DeutschB1Coach;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "DeutschB1Coach/Bridging/DeutschB1Coach-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1FB23C03BEC7FBE004FA9DD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "DeutschB1Coach/Generated/Tests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.faysel.DeutschB1CoachTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeutschB1Coach.app/DeutschB1Coach";
+			};
+			name = Debug;
+		};
+		378EB398AEB8AD78293BFE46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"DeutschB1Coach/Frameworks\"",
+				);
+				INFOPLIST_FILE = DeutschB1Coach/Generated/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.faysel.DeutschB1Coach;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "DeutschB1Coach/Bridging/DeutschB1Coach-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7B8A344D6FE6F43A7C84E0F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		8A5098F3783695323A9BC43A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "DeutschB1Coach/Generated/Tests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.faysel.DeutschB1CoachTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeutschB1Coach.app/DeutschB1Coach";
+			};
+			name = Release;
+		};
+		AF65E2EE74E18FEF433AD7BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0CA7E86ED268A57A310E4663 /* Build configuration list for PBXProject "DeutschB1Coach" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B8A344D6FE6F43A7C84E0F7 /* Debug */,
+				AF65E2EE74E18FEF433AD7BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		25A5CF59C7F936CFCD9E8A46 /* Build configuration list for PBXNativeTarget "DeutschB1Coach" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E2E8E4D60DD51BA146B1A1E /* Debug */,
+				378EB398AEB8AD78293BFE46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C5C03F7CE4655DEC4641D3E7 /* Build configuration list for PBXNativeTarget "DeutschB1CoachTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FB23C03BEC7FBE004FA9DD4 /* Debug */,
+				8A5098F3783695323A9BC43A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2017D9849A1B231C1377162D /* Project object */;
+}

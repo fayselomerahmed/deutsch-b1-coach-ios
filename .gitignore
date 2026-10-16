@@ -1,0 +1,24 @@
+# Xcode
+DerivedData/
+build/
+build-*/
+*.xcuserstate
+*.xcscmblueprint
+xcuserdata/
+
+# macOS
+.DS_Store
+
+# Python and local generation environments
+.venv*/
+__pycache__/
+*.pyc
+
+# Incomplete generated audio
+DeutschB1Coach/Resources/NeuralAudio/*.tmp
+DeutschB1Coach/Resources/NeuralAudio/*.wav
+
+# Local tooling output
+tmp/
+output/
+

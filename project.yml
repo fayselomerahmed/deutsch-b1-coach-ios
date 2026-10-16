@@ -1,0 +1,88 @@
+name: DeutschB1Coach
+options:
+  bundleIdPrefix: com.faysel
+  deploymentTarget:
+    iOS: "17.0"
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    DEVELOPMENT_TEAM: ""
+targets:
+  DeutschB1Coach:
+    type: application
+    platform: iOS
+    info:
+      path: DeutschB1Coach/Generated/Info.plist
+      properties:
+        CFBundleDisplayName: Deutsch B1 Coach
+        ITSAppUsesNonExemptEncryption: false
+        LSApplicationCategoryType: public.app-category.education
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        UILaunchScreen:
+          UIColorName: ""
+          UIImageName: ""
+        NSSpeechRecognitionUsageDescription: Speech recognition is used to score German speaking practice.
+        NSMicrophoneUsageDescription: The microphone is used for German speaking practice.
+        LiveContentBaseURL: "https://example.invalid"
+    sources:
+      - path: DeutschB1Coach/App
+      - path: DeutschB1Coach/Bridging
+      - path: DeutschB1Coach/Models
+      - path: DeutschB1Coach/Services
+      - path: DeutschB1Coach/ViewModels
+      - path: DeutschB1Coach/Views
+      - path: DeutschB1Coach/Resources
+        excludes:
+          - NeuralAudio
+          - NeuralTTSModel
+        buildPhase: resources
+      - path: DeutschB1Coach/Resources/NeuralAudio
+        type: folder
+        buildPhase: resources
+      - path: DeutschB1Coach/Resources/NeuralTTSModel
+        type: folder
+        buildPhase: resources
+    dependencies:
+      - framework: DeutschB1Coach/Frameworks/sherpa-onnx.xcframework
+        embed: false
+      - framework: DeutschB1Coach/Frameworks/onnxruntime.xcframework
+        embed: false
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.faysel.DeutschB1Coach
+        CODE_SIGN_STYLE: Automatic
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        OTHER_LDFLAGS:
+          - $(inherited)
+          - -lc++
+        SWIFT_OBJC_BRIDGING_HEADER: DeutschB1Coach/Bridging/DeutschB1Coach-Bridging-Header.h
+      configs:
+        Debug:
+          # iOS 27 beta rejects Xcode's writable Debug Dylib pages on physical devices.
+          ENABLE_DEBUG_DYLIB: NO
+    scheme:
+      testTargets:
+        - DeutschB1CoachTests
+  DeutschB1CoachTests:
+    type: bundle.unit-test
+    platform: iOS
+    info:
+      path: DeutschB1Coach/Generated/Tests-Info.plist
+    sources:
+      - path: DeutschB1Coach/Tests
+    dependencies:
+      - target: DeutschB1Coach
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.faysel.DeutschB1CoachTests
