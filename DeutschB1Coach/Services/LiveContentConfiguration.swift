@@ -43,3 +43,30 @@ enum AppLinks {
             ?? URL(string: "https://github.com/fayselomerahmed/deutsch-b1-coach-ios/blob/main/SUPPORT.md")!
     }
 }
+
+/// Pure timing rules shared by managed access monitoring and its regression tests.
+enum ManagedAccessRefreshPolicy {
+    static let foregroundInterval: TimeInterval = 15 * 60
+    static let initialRetryInterval: TimeInterval = 30
+    static let maximumRetryInterval: TimeInterval = 15 * 60
+    static let offlineGrace: TimeInterval = 72 * 60 * 60
+
+    static func refreshInterval(consecutiveFailures: Int) -> TimeInterval {
+        guard consecutiveFailures > 0 else { return foregroundInterval }
+        let exponent = min(consecutiveFailures - 1, 5)
+        return min(maximumRetryInterval, initialRetryInterval * pow(2, Double(exponent)))
+    }
+
+    static func remainingDelay(lastCheck: Date?, consecutiveFailures: Int, now: Date = .now) -> TimeInterval {
+        guard let lastCheck else { return 0 }
+        let interval = refreshInterval(consecutiveFailures: consecutiveFailures)
+        let elapsed = now.timeIntervalSince(lastCheck)
+        guard elapsed.isFinite else { return interval }
+        return min(interval, max(0, interval - elapsed))
+    }
+
+    static func isCacheFresh(verifiedAt: TimeInterval, now: Date = .now) -> Bool {
+        let age = now.timeIntervalSince1970 - verifiedAt
+        return verifiedAt.isFinite && verifiedAt > 0 && age.isFinite && age >= 0 && age <= offlineGrace
+    }
+}

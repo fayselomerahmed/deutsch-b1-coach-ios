@@ -92,7 +92,6 @@ final class PremiumAccessService {
     private let managedCacheLevelKey = "premiumAccess.managed.level"
     private let managedCacheExpiryKey = "premiumAccess.managed.expiry"
     private let managedCacheVerifiedKey = "premiumAccess.managed.verified"
-    private let offlineGrace: TimeInterval = 72 * 60 * 60
 
     let accessID = PremiumAccessIdentity.loadOrCreate()
     var products: [Product] = []
@@ -111,6 +110,7 @@ final class PremiumAccessService {
     private var appStoreAccessIsActive = false
     private var managedAccessIsActive = false
     private var managedRefreshInFlight = false
+    private var consecutiveManagedFailures = 0
     private var updatesTask: Task<Void, Never>?
 
     var accessBadgeTitle: String {
@@ -205,6 +205,7 @@ final class PremiumAccessService {
             request.setValue("application/json", forHTTPHeaderField: "Accept")
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
             let (data, response) = try await URLSession.shared.data(for: request)
+            try Task.checkCancellation()
             guard let httpResponse = response as? HTTPURLResponse,
                   (200..<300).contains(httpResponse.statusCode)
             else { throw URLError(.badServerResponse) }
@@ -216,8 +217,11 @@ final class PremiumAccessService {
             managedAccessIsActive = payload.isActive
             managedAccessError = nil
             lastManagedAccessCheck = .now
+            consecutiveManagedFailures = 0
             cacheManagedAccess(payload)
         } catch {
+            guard !Task.isCancelled else { return }
+            consecutiveManagedFailures = min(consecutiveManagedFailures + 1, 6)
             managedAccessError = "Access could not be verified. Check the internet connection and try again."
             lastManagedAccessCheck = .now
             restoreManagedCacheIfEligible()
@@ -226,14 +230,36 @@ final class PremiumAccessService {
     }
 
     func monitorManagedAccess() async {
-        guard !isMonitoringManagedAccess else { return }
+        // The public offline build has no access endpoint and needs no polling task.
+        guard LiveContentConfiguration.current() != nil, !isMonitoringManagedAccess else { return }
         isMonitoringManagedAccess = true
         defer { isMonitoringManagedAccess = false }
 
         while !Task.isCancelled {
-            await refreshManagedAccess()
+            guard LiveContentConfiguration.current() != nil else { return }
+            restoreManagedCacheIfEligible()
+            recomputeAccess()
+
+            let delay = ManagedAccessRefreshPolicy.remainingDelay(
+                lastCheck: lastManagedAccessCheck,
+                consecutiveFailures: consecutiveManagedFailures
+            )
+            if delay == 0 {
+                await refreshManagedAccess()
+            }
+
+            var nextDelay = ManagedAccessRefreshPolicy.remainingDelay(
+                lastCheck: lastManagedAccessCheck,
+                consecutiveFailures: consecutiveManagedFailures
+            )
+            // Another foreground refresh may already be in flight without a last-check date.
+            if nextDelay <= 0 { nextDelay = ManagedAccessRefreshPolicy.initialRetryInterval }
+            if managedAccessIsActive, let expiry = managedAccessExpiresAt {
+                let untilExpiry = expiry.timeIntervalSinceNow
+                if untilExpiry > 0 { nextDelay = min(nextDelay, untilExpiry) }
+            }
             do {
-                try await Task.sleep(for: .seconds(3))
+                try await Task.sleep(for: .seconds(nextDelay))
             } catch {
                 return
             }
@@ -330,7 +356,7 @@ final class PremiumAccessService {
         }
 
         let verifiedAt = defaults.double(forKey: managedCacheVerifiedKey)
-        guard verifiedAt > 0, Date.now.timeIntervalSince1970 - verifiedAt <= offlineGrace else {
+        guard ManagedAccessRefreshPolicy.isCacheFresh(verifiedAt: verifiedAt) else {
             managedAccessIsActive = false
             return
         }
