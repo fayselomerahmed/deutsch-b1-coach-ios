@@ -21,4 +21,6 @@ DeutschB1Coach/Resources/NeuralAudio/*.wav
 # Local tooling output
 tmp/
 output/
+.build/
+.swiftpm/
 

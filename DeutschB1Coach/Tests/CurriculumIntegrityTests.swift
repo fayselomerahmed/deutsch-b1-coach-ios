@@ -1498,11 +1498,12 @@ final class CurriculumIntegrityTests: XCTestCase {
         XCTAssertEqual(defaults["NSPrivacyAccessedAPITypeReasons"] as? [String], ["CA92.1"])
     }
 
-    func testProductionLiveServicesRemainConfigured() throws {
-        let configuration = try XCTUnwrap(LiveContentConfiguration.current())
-        XCTAssertEqual(configuration.baseURL, LiveContentConfiguration.productionBaseURL)
+    func testLiveServicesRequireAnExplicitSecureEndpoint() throws {
+        XCTAssertNil(LiveContentConfiguration.parse(rawURL: ""))
+        XCTAssertNil(LiveContentConfiguration.parse(rawURL: "http://example.com"))
+        let configuration = try XCTUnwrap(LiveContentConfiguration.parse(rawURL: "https://example.com"))
         XCTAssertEqual(configuration.baseURL.scheme, "https")
-        XCTAssertEqual(configuration.baseURL.host, "example.invalid")
+        XCTAssertEqual(configuration.baseURL.host, "example.com")
     }
 
     func testNeuralAudioResourceNamesAreStable() {

@@ -101,16 +101,14 @@ enum PrivateProductAnalytics {
 }
 
 private enum ProductMetricReporter {
-    private static let endpoint = URL(
-        string: "https://example.invalid/api/analytics/event"
-    )!
-
     private struct Payload: Encodable {
         let event: String
         let appBuild: Int
     }
 
     static func send(_ event: ProductFunnelEvent) async {
+        guard let endpoint = LiveContentConfiguration.current()?.baseURL
+            .appendingPathComponent("api/analytics/event") else { return }
         var request = URLRequest(url: endpoint)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")

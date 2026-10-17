@@ -25,7 +25,7 @@
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.education</string>
 	<key>LiveContentBaseURL</key>
-	<string>https://example.invalid</string>
+	<string></string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>The microphone is used for German speaking practice.</string>
 	<key>NSSpeechRecognitionUsageDescription</key>

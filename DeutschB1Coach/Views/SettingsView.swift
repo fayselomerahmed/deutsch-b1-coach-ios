@@ -246,7 +246,7 @@ struct SettingsView: View {
                     .font(.caption)
                     .foregroundStyle(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
-                    Link(destination: URL(string: "https://example.invalid/privacy")!) {
+                    Link(destination: AppLinks.privacy) {
                         TeachingLabel(english: "Read the privacy policy", systemImage: "doc.text.fill")
                     }
                 } header: {
@@ -275,7 +275,7 @@ struct SettingsView: View {
                     } label: {
                         TeachingText(english: "Curriculum")
                     }
-                    Link(destination: URL(string: "https://example.invalid/support")!) {
+                    Link(destination: AppLinks.support) {
                         TeachingLabel(english: "Help and support", systemImage: "questionmark.circle.fill")
                     }
                 } header: {
@@ -396,9 +396,7 @@ struct AdminContentStudioView: View {
     @StateObject private var liveContent = LiveContentService.shared
     @State private var statusMessage: String?
 
-    private let dashboardURL = URL(
-        string: "https://example.invalid"
-    )!
+    private var dashboardURL: URL { AppLinks.dashboard }
 
     var body: some View {
         ScrollView {

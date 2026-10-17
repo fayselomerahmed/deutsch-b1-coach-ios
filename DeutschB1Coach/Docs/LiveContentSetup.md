@@ -1,8 +1,8 @@
 # Live Content
 
-The shipped app receives curriculum updates from the hosted Deutsch Coach Content Studio. Learners have read-only access. Publishing, rollback, and removal require the activated owner account.
+The app can receive curriculum updates from your deployed Deutsch Coach Content Studio. Learners have read-only access. Publishing, rollback, and removal require the activated owner account. A fresh checkout has remote services disabled and uses the bundled offline course.
 
-Owner dashboard: `https://example.invalid`
+Set `LiveContentBaseURL` in `project.yml` to your own HTTPS endpoint, then run `xcodegen generate`. Do not include credentials in the URL. This endpoint is shared by curriculum, access, and opt-in aggregate metrics. Deploy the companion studio and configure its trusted gateway, database, and activation secret before enabling it.
 
 ## Publishing after release
 

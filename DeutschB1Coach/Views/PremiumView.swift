@@ -388,7 +388,7 @@ struct PremiumView: View {
         Link(destination: URL(string: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/")!) {
             TeachingText(english: "Terms of Use")
         }
-        Link(destination: URL(string: "https://example.invalid/privacy")!) {
+        Link(destination: AppLinks.privacy) {
             TeachingText(english: "Privacy")
         }
         Link(destination: URL(string: "https://apps.apple.com/account/subscriptions")!) {

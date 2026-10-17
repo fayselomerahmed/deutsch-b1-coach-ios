@@ -1,26 +1,37 @@
 # Deutsch B1 Coach
 
-The course can teach through 20 languages: English, Amharic, Arabic, Simplified Chinese, Dutch, French, Hindi, Indonesian, Italian, Japanese, Korean, Polish, Portuguese, Russian, Spanish, Thai, Tigrinya, Turkish, Ukrainian, and Vietnamese. Bundled explanations cover the complete learning interface; on supported systems Apple translation can assist new live content while German examples remain unchanged and English remains available as a fallback.
+My German-learning project for adult learners progressing from A1 to B1. I bring lessons, vocabulary review, speaking practice, writing, and exam preparation into a native iPhone experience that keeps curriculum and learner progress available offline.
 
-Deutsch B1 Coach is a native, offline-first SwiftUI learning app for adult German learners from A1 through B1. It combines a structured lesson path, active-recall flashcards, spaced repetition, speaking and writing practice, skill analytics, and a B1-style practice exam.
+**SwiftUI · SwiftData · Swift Concurrency · Speech · StoreKit 2 · Swift Charts · on-device neural audio**
 
-## Product Scope
+## What the app does
 
-- 75 guided lessons: 25 at each CEFR level, each with eight learning stages.
-- 702 vocabulary entries: 252 A1, 221 A2, and 229 B1 flashcards, each with a unique contextual example and an offline word-specific visual mnemonic.
-- 75 grammar units and 908 distinct exercises: at least 9 per topic across translation, cloze, correction, and sentence order.
-- 2,799 vocabulary, article, two-direction recall, and grammar quiz prompts.
-- 15 real-life speaking missions across introductions, services, health, travel, housing, work, authorities, negotiation, and B1 exam interaction.
-- SM-2 review scheduling for activated vocabulary and grammar.
-- Reading, listening, writing, and speaking practice with local scoring, corrected German, concrete error feedback, and retry suggestions.
-- Twelve-question placement assessment and persistent level recommendation.
-- B1-style timed practice exam across all four skills.
-- SwiftData progress history, streaks, XP, mastery, milestones, and seven-day activity charts.
-- StoreKit 2 monthly and annual offers, restoration of legacy lifetime purchases, and institutional access through a privacy-preserving iPhone Access ID.
-- 2,580 instant offline German clips plus on-device neural generation for personalized corrections, all using the same Thorsten voice.
-- Local study reminders, Dynamic Type, VoiceOver labels, dark mode, and an Apple privacy manifest.
+- Guides learners through placement, a structured lesson path, and everyday conversation missions.
+- Includes 702 bundled vocabulary entries across A1, A2, and B1, with contextual examples and visual mnemonics.
+- Generates lessons and quiz practice from versioned curriculum data, with SM-2 scheduling for vocabulary and grammar review.
+- Provides speaking and writing practice, local feedback, and a timed B1-style practice exam.
+- Tracks study activity, mastery, streaks, and XP in SwiftData, with charts for progress and readiness.
+- Supports explanations in 20 teaching languages, local study reminders, Dynamic Type, VoiceOver labels, and dark mode.
+- Integrates StoreKit 2 subscriptions, purchase restoration, and managed-access entitlements.
 
-All curriculum and learner progress work offline. Speech recognition uses Apple's on-device/system Speech framework when available; no custom analytics or advertising SDK is included.
+The core course and progress work offline. Speech recognition availability depends on Apple's Speech framework and the device's supported languages.
+
+## Engineering decisions
+
+I separate bundled curriculum from learner-owned records so content can be refreshed while retaining study history. `ContentLoader` synchronizes stable content IDs; `CurriculumFactory` expands the source packs into lesson and quiz material. Review scheduling and response scoring live in dedicated services rather than in views.
+
+For audio, bundled German clips cover common content, while sherpa-onnx renders new corrections on the device using the same Thorsten voice. Generation runs off the main thread and caches successful output. This keeps personalized speech independent of a paid speech API, at the cost of a larger application bundle and native runtime dependencies.
+
+Optional curriculum updates come from the companion [Curriculum Studio](https://github.com/fayselomerahmed/deutsch-b1-coach-studio). The app verifies content hashes and retains a local copy; a remote service is not required for the bundled course.
+
+## Start reading the code
+
+- [App entry point](DeutschB1Coach/App/DeutschB1CoachApp.swift) — lifecycle and persistence setup.
+- [Content loader](DeutschB1Coach/Services/ContentLoader.swift) and [curriculum factory](DeutschB1Coach/Services/CurriculumFactory.swift) — content synchronization and generated practice.
+- [SM-2 scheduler](DeutschB1Coach/Services/SM2Scheduler.swift) — review intervals, ease, and lapse handling.
+- [On-device voice renderer](DeutschB1Coach/Services/OnDeviceGermanVoiceRenderer.swift) — native inference integration and audio caching.
+- [View models](DeutschB1Coach/ViewModels) and [views](DeutschB1Coach/Views) — lesson, review, dashboard, and speaking flows.
+- [Tests](DeutschB1Coach/Tests) — curriculum integrity, scheduling, free-response evaluation, and speech scoring.
 
 ## Build
 
@@ -64,13 +75,22 @@ Keep `deutschb1coach.premium.lifetime` unavailable for sale. The app recognizes 
 
 App Store distribution also requires product pricing/localization, screenshots, support and privacy-policy URLs, subscription review metadata, and a distribution provisioning profile. The bundled B1 exam is practice material and is not affiliated with Goethe-Institut, telc, or another examination provider.
 
-The live owner dashboard at `https://example.invalid` uses Cloudflare D1, a managed SQLite-compatible database, to store versioned curriculum and hashed managed-access records. Learner progress and speech data remain on the iPhone. See `DeutschB1Coach/Docs/LiveContentSetup.md` for the activation workflow.
+The optional companion studio uses Cloudflare D1 to store versioned curriculum and hashed managed-access records. Configure your deployment's endpoint through `LiveContentBaseURL`; see [Live Content Setup](DeutschB1Coach/Docs/LiveContentSetup.md) for the activation workflow. Learner progress and speech data remain on the iPhone.
+
+## Validation and current status
+
+Seven host-runnable core tests pass with `swift test`, covering scheduling, free-response scoring, and HTTPS-only remote configuration. The Xcode suite additionally covers curriculum integrity and speech scoring. Build/test automation is included for both core and iOS checks.
+
+A full local simulator build was attempted but blocked by the installed iOS platform/runtime, so the iOS build and full XCTest are not yet verified. See [release readiness](PRODUCTION_READINESS.md) for the remaining service, device, curriculum, and App Store checks. Remote services default to disabled in the public configuration; set your own `LiveContentBaseURL` to enable them.
+
+This is a development project. Production purchases require App Store Connect configuration, and curriculum and exam material still need the review described in the teacher-review protocol before a release claim. The B1 practice material is not an official exam or certification.
 
 ## Documentation
 
-- `DeutschB1Coach/Docs/Architecture.md`
-- `DeutschB1Coach/Docs/CurriculumPlan.md`
-- `DeutschB1Coach/Docs/DesignSystem.md`
-- `DeutschB1Coach/Docs/ProductStrategy.md`
-- `DeutschB1Coach/Docs/AppStoreLaunch.md`
-- `DeutschB1Coach/Docs/TeacherReviewProtocol.md`
+- [Architecture](DeutschB1Coach/Docs/Architecture.md)
+- [Curriculum plan](DeutschB1Coach/Docs/CurriculumPlan.md)
+- [Design system](DeutschB1Coach/Docs/DesignSystem.md)
+- [Product strategy](DeutschB1Coach/Docs/ProductStrategy.md)
+- [App Store launch](DeutschB1Coach/Docs/AppStoreLaunch.md)
+- [Teacher-review protocol](DeutschB1Coach/Docs/TeacherReviewProtocol.md)
+- [Third-party notices](DeutschB1Coach/Docs/ThirdPartyNotices.md) — Piper, the Thorsten voice, sherpa-onnx, and optional Chatterbox tooling.

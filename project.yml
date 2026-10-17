@@ -33,7 +33,8 @@ targets:
           UIImageName: ""
         NSSpeechRecognitionUsageDescription: Speech recognition is used to score German speaking practice.
         NSMicrophoneUsageDescription: The microphone is used for German speaking practice.
-        LiveContentBaseURL: "https://example.invalid"
+        # Optional. Set your own HTTPS deployment before enabling remote services.
+        LiveContentBaseURL: ""
     sources:
       - path: DeutschB1Coach/App
       - path: DeutschB1Coach/Bridging

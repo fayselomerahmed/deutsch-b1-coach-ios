@@ -494,31 +494,6 @@ final class AdminContentManager: ObservableObject {
     }
 }
 
-struct LiveContentConfiguration: Equatable {
-    let baseURL: URL
-    let publicAPIKey: String
-
-    static let productionBaseURL = URL(
-        string: "https://example.invalid"
-    )!
-
-    static func current(bundle: Bundle = .main) -> LiveContentConfiguration? {
-        let rawURL = bundle.object(forInfoDictionaryKey: "LiveContentBaseURL") as? String
-        let rawKey = bundle.object(forInfoDictionaryKey: "LiveContentAnonKey") as? String ?? ""
-
-        let configuredURL = rawURL?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
-        let urlValue = configuredURL.isEmpty ? productionBaseURL.absoluteString : configuredURL
-        let keyValue = rawKey.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard !urlValue.isEmpty,
-              let baseURL = URL(string: urlValue),
-              let scheme = baseURL.scheme?.lowercased(),
-              scheme == "https"
-        else { return nil }
-
-        return LiveContentConfiguration(baseURL: baseURL, publicAPIKey: keyValue)
-    }
-}
-
 private struct LiveContentManifestRecord: Decodable {
     let fileName: String
     let version: Int64
