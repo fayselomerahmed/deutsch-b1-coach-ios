@@ -79,9 +79,9 @@ The optional companion studio uses Cloudflare D1 to store versioned curriculum a
 
 ## Validation and current status
 
-Seven host-runnable core tests pass with `swift test`, covering scheduling, free-response scoring, and HTTPS-only remote configuration. The Xcode suite additionally covers curriculum integrity and speech scoring. Build/test automation is included for both core and iOS checks.
+The [hosted build](https://github.com/fayselomerahmed/deutsch-b1-coach-ios/actions/runs/39033663883) passed a complete Release simulator build and all 78 iOS XCTest cases on 2026-10-17, including curriculum integrity and speech scoring. Seven host-runnable core tests also pass with `swift test`, covering scheduling, free-response scoring, and HTTPS-only remote configuration.
 
-A full local simulator build was attempted but blocked by the installed iOS platform/runtime, so the iOS build and full XCTest are not yet verified. See [release readiness](PRODUCTION_READINESS.md) for the remaining service, device, curriculum, and App Store checks. Remote services default to disabled in the public configuration; set your own `LiveContentBaseURL` to enable them.
+See [release readiness](PRODUCTION_READINESS.md) for the remaining service, physical-device, curriculum, and App Store checks. Remote services default to disabled in the public configuration; set your own `LiveContentBaseURL` to enable them.
 
 This is a development project. Production purchases require App Store Connect configuration, and curriculum and exam material still need the review described in the teacher-review protocol before a release claim. The B1 practice material is not an official exam or certification.
 

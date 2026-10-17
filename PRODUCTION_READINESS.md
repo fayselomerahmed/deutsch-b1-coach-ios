@@ -8,11 +8,11 @@ Status: development candidate, not an App Store release certification.
 - XcodeGen regenerates the shared app/test project without a personal signing team.
 - Remote curriculum, access checks, and opt-in metrics require an explicit HTTPS deployment; a clean checkout uses the bundled offline curriculum.
 
-Full simulator Release build and XCTest were attempted on 2026-10-17 but blocked by this machine's unavailable iOS platform/simulator runtime. The checked-in workflow performs those checks on a configured hosted Mac; adding it does not itself mean a successful run.
+On 2026-10-17 the [hosted workflow](https://github.com/fayselomerahmed/deutsch-b1-coach-ios/actions/runs/39033663883) passed the full simulator Release build, all 78 iOS XCTest cases with zero failures, and seven host-runnable core tests at `b263b2ab`. The local machine's missing iOS runtime remains a local tooling limitation, not a substitute for this hosted build evidence.
 
 ## Required before release
 
-- [ ] Green hosted simulator build and full XCTest, including curriculum and speech checks.
+- [x] Green hosted simulator Release build and full XCTest, including curriculum and speech checks.
 - [ ] Test migrations, progress reset, offline launch, denied permissions, Dynamic Type, VoiceOver, and memory pressure on physical devices.
 - [ ] Teacher review of generated lessons, translations, feedback, and practice exams; never market practice material as an official certificate.
 - [ ] Confirm model/runtime licensing and notices, app size, device performance, and native runtime stability.
