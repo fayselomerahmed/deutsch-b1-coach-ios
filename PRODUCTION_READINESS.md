@@ -4,13 +4,14 @@ Status: development candidate, not an App Store release certification.
 
 ## Implemented safeguards
 
-- `swift test`: 13 host-runnable tests for review scheduling, free-response scoring, safe remote configuration, and bounded managed-access refresh policy.
+- `swift test`: 18 host-runnable tests for review scheduling, free-response scoring, safe remote configuration, bounded managed-access refresh policy, and content-cache reuse/invalidation.
 - XcodeGen regenerates the shared app/test project without a personal signing team.
 - Remote curriculum, access checks, and opt-in metrics require an explicit HTTPS deployment; a clean checkout uses the bundled offline curriculum.
 - Persistent-container failures show a retry screen without deleting data, moving the store, or silently falling back to in-memory progress.
 - Managed-access refreshes use a foreground cadence and bounded failure backoff; verified cache timestamps must be finite and not in the future.
+- Decoded curriculum and generated lessons/quizzes are reused only within the current owner-content revision. Imports, rollback, restoration and live updates invalidate the cache; failed reads can be retried.
 
-On 2026-10-17 the [hosted workflow](https://github.com/fayselomerahmed/deutsch-b1-coach-ios/actions/runs/39064142087) passed the full simulator Release build, all 87 iOS XCTest cases with zero failures, and 13 host-runnable core tests at `61a68bc`. The core package reuses a subset of the iOS test files. The local machine's missing iOS runtime remains a local tooling limitation, not a substitute for this hosted build evidence.
+On 2026-10-18 (Europe/Berlin) the [hosted workflow](https://github.com/fayselomerahmed/deutsch-b1-coach-ios/actions/runs/39072623138) passed the full simulator Release build, all 94 iOS XCTest cases with zero failures, and 18 host-runnable core tests at `1e0f92e`. The core package reuses a subset of the iOS test files. The local machine's missing iOS runtime remains a local tooling limitation, not a substitute for this hosted build evidence.
 
 A separate [screenshot workflow](https://github.com/fayselomerahmed/deutsch-b1-coach-ios/actions/runs/39063739835) built and launched the app and captured the bundled-curriculum interface on an iPhone simulator. These genuine captures confirm the shown screens rendered, not physical-device performance or service integration.
 

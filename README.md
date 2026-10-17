@@ -31,6 +31,8 @@ Language study often spreads vocabulary, grammar, speaking, and exam practice ac
 
 **Content updates without resetting progress.** [ContentLoader](DeutschB1Coach/Services/ContentLoader.swift) synchronizes stable curriculum IDs separately from learner records. [CurriculumFactory](DeutschB1Coach/Services/CurriculumFactory.swift) expands source packs into practice; scheduling and response evaluation are independent of the UI.
 
+**Reuse work until content changes.** A [revision-scoped cache](DeutschB1Coach/Services/ContentRevisionCache.swift) reuses successful source decodes and generated lesson/quiz arrays. Imports, rollback, and live updates invalidate the cache; failed reads remain retryable. This reduces repeated work, with an explicit trade-off of retaining immutable course values in memory.
+
 **On-device speech, with an explicit size trade-off.** Common clips are bundled; new German audio runs through a Swift/Objective-C++ bridge to sherpa-onnx. A serial background queue, validated temporary files, and a bounded cache keep inference and file management outside view code. This removes a paid speech-service dependency but adds model size and native-runtime complexity.
 
 **Optional services, not a startup dependency.** The companion [Curriculum Studio](https://github.com/fayselomerahmed/deutsch-b1-coach-studio) publishes versioned, hash-checked content. Verified content is retained locally; remote services require explicit HTTPS configuration and are disabled in a fresh checkout.
@@ -41,13 +43,15 @@ Language study often spreads vocabulary, grammar, speaking, and exam practice ac
 
 ## Verified build and tests
 
-The [verified CI run](https://github.com/fayselomerahmed/deutsch-b1-coach-ios/actions/runs/39064142087) at `61a68bc` passed a Release iOS simulator build, **87 iOS XCTest cases**, and **13 host-runnable core tests** on 2026-10-17. Coverage includes curriculum integrity, review scheduling, free-response evaluation, speech scoring, remote configuration, startup recovery, and managed-access refresh policy. The core package reuses a subset of the iOS tests; these are not 100 distinct tests.
+The [verified CI run](https://github.com/fayselomerahmed/deutsch-b1-coach-ios/actions/runs/39072623138) at `1e0f92e` passed a Release iOS simulator build, **94 iOS XCTest cases**, and **18 host-runnable core tests** on 2026-10-18 (Europe/Berlin). Coverage includes curriculum integrity, review scheduling, free-response evaluation, speech scoring, remote configuration, startup recovery, managed-access refresh policy, and revision-aware cache reuse/invalidation. The core package reuses a subset of the iOS tests; its count is not additive distinct-test coverage.
 
 ```bash
 swift test
 ```
 
 The full iOS suite runs through the shared `DeutschB1Coach` Xcode scheme. [CI configuration](.github/workflows/build.yml) documents the exact build and test commands.
+
+Documentation-only pushes skip the app rebuild; pull requests and manual runs still execute all build checks. Secret scans remain active for every push.
 
 ## Run locally
 
