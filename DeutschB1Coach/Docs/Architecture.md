@@ -15,11 +15,13 @@ Deutsch B1 Coach is an iOS 17+ SwiftUI application with local-first content and 
 
 1. Versioned JSON files ship in the application bundle.
 2. `ContentLoader` validates and decodes them on first launch.
-3. `CurriculumFactory` combines source grammar and vocabulary into 75 complete lessons and 2,799 answerable quiz prompts; `ContentLoader` also decodes 15 real-life conversation missions.
+3. `CurriculumFactory` combines the 76 bundled grammar topics and 702 vocabulary entries into 76 complete lessons and 2,811 quiz prompts; `ContentLoader` also decodes 25 real-life conversation missions.
 4. SwiftData stores curriculum entities and separate learner-owned state.
 5. `ProgressService` records XP, attempts, review outcomes, mastery, streaks, and skill activity.
 
 Seeding is idempotent. Existing learner progress remains intact when the application launches again.
+
+These counts describe the bundled curriculum. The quiz total follows the current factory: five explicit prompts, two prompts per vocabulary entry (1,404), 482 article prompts, and 920 grammar-practice prompts. Published curriculum updates can change the available content.
 
 ## Persistence
 
@@ -42,7 +44,7 @@ Cloudflare D1 stores published curriculum versions, owner configuration, and has
 ## Quality Gates
 
 - `Tools/generate_curriculum.js` can regenerate and validate curriculum packs.
-- `Tools/generate_neural_audio.py` deterministically generates resumable offline German audio packs without an API key.
+- `Tools/generate_neural_audio.py` generates offline German audio packs without an API key, using stable text-derived asset names to resume work and reuse completed clips.
 - `CurriculumIntegrityTests` checks per-level counts, references, answerable questions, and generation of natural audio for a non-pre-recorded correction.
 - Scheduler and speech scoring have focused unit tests.
-- `xcodebuild ... build-for-testing` verifies app and test compilation before release.
+- The [hosted build workflow](../../.github/workflows/build.yml) performs a Release simulator build, runs the full iOS XCTest suite, and runs the host-compatible core tests with `swift test`.

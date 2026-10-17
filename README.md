@@ -1,96 +1,63 @@
 # Deutsch B1 Coach
 
-My German-learning project for adult learners progressing from A1 to B1. I bring lessons, vocabulary review, speaking practice, writing, and exam preparation into a native iPhone experience that keeps curriculum and learner progress available offline.
+Offline-first German learning for adult learners working from A1 to B1: lessons, spaced repetition, speaking practice, and progress in a native iOS app.
 
-**SwiftUI · SwiftData · Swift Concurrency · Speech · StoreKit 2 · Swift Charts · on-device neural audio**
+Swift · SwiftUI · SwiftData · Swift Concurrency · Speech · StoreKit 2 · Swift Charts · on-device neural audio
 
-## What the app does
+[![Build and tests](https://github.com/fayselomerahmed/deutsch-b1-coach-ios/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/fayselomerahmed/deutsch-b1-coach-ios/actions/workflows/build.yml)
 
-- Guides learners through placement, a structured lesson path, and everyday conversation missions.
-- Includes 702 bundled vocabulary entries across A1, A2, and B1, with contextual examples and visual mnemonics.
-- Generates lessons and quiz practice from versioned curriculum data, with SM-2 scheduling for vocabulary and grammar review.
-- Provides speaking and writing practice, local feedback, and a timed B1-style practice exam.
-- Tracks study activity, mastery, streaks, and XP in SwiftData, with charts for progress and readiness.
-- Supports explanations in 20 teaching languages, local study reminders, Dynamic Type, VoiceOver labels, and dark mode.
-- Integrates StoreKit 2 subscriptions, purchase restoration, and managed-access entitlements.
+## The problem
 
-The core course and progress work offline. Speech recognition availability depends on Apple's Speech framework and the device's supported languages.
+Language study often spreads vocabulary, grammar, speaking, and exam practice across separate tools. This project brings them into one learning path while keeping the core curriculum and learner progress available without a server connection.
 
-## Engineering decisions
+## Implemented
 
-I separate bundled curriculum from learner-owned records so content can be refreshed while retaining study history. `ContentLoader` synchronizes stable content IDs; `CurriculumFactory` expands the source packs into lesson and quiz material. Review scheduling and response scoring live in dedicated services rather than in views.
+- Placement, guided lessons, grammar practice, everyday conversation missions, and a timed B1-style practice exam.
+- 702 bundled vocabulary entries across A1, A2, and B1, with examples, audio, and SM-2 review scheduling.
+- Speaking and writing exercises with local response evaluation; Apple Speech provides recognition where supported.
+- SwiftData-backed progress, learning activity, mastery, streaks, and XP, visualized with Swift Charts.
+- Teaching-language explanations, study reminders, Dynamic Type, VoiceOver labels, and dark mode.
+- StoreKit 2 subscription/restoration integration and optional managed-access entitlements.
 
-For audio, bundled German clips cover common content, while sherpa-onnx renders new corrections on the device using the same Thorsten voice. Generation runs off the main thread and caches successful output. This keeps personalized speech independent of a paid speech API, at the cost of a larger application bundle and native runtime dependencies.
+## Engineering highlights
 
-Optional curriculum updates come from the companion [Curriculum Studio](https://github.com/fayselomerahmed/deutsch-b1-coach-studio). The app verifies content hashes and retains a local copy; a remote service is not required for the bundled course.
+**Content updates without resetting progress.** [ContentLoader](DeutschB1Coach/Services/ContentLoader.swift) synchronizes stable curriculum IDs separately from learner records. [CurriculumFactory](DeutschB1Coach/Services/CurriculumFactory.swift) expands source packs into practice; scheduling and response evaluation are independent of the UI.
 
-## Start reading the code
+**On-device speech, with an explicit size trade-off.** Common clips are bundled; new German audio runs through a Swift/Objective-C++ bridge to sherpa-onnx. A serial background queue, validated temporary files, and a bounded cache keep inference and file management outside view code. This removes a paid speech-service dependency but adds model size and native-runtime complexity.
 
-- [App entry point](DeutschB1Coach/App/DeutschB1CoachApp.swift) — lifecycle and persistence setup.
-- [Content loader](DeutschB1Coach/Services/ContentLoader.swift) and [curriculum factory](DeutschB1Coach/Services/CurriculumFactory.swift) — content synchronization and generated practice.
-- [SM-2 scheduler](DeutschB1Coach/Services/SM2Scheduler.swift) — review intervals, ease, and lapse handling.
-- [On-device voice renderer](DeutschB1Coach/Services/OnDeviceGermanVoiceRenderer.swift) — native inference integration and audio caching.
-- [View models](DeutschB1Coach/ViewModels) and [views](DeutschB1Coach/Views) — lesson, review, dashboard, and speaking flows.
-- [Tests](DeutschB1Coach/Tests) — curriculum integrity, scheduling, free-response evaluation, and speech scoring.
+**Optional services, not a startup dependency.** The companion [Curriculum Studio](https://github.com/fayselomerahmed/deutsch-b1-coach-studio) publishes versioned, hash-checked content. Verified content is retained locally; remote services require explicit HTTPS configuration and are disabled in a fresh checkout.
 
-## Build
+[Read the engineering case study](docs/CASE_STUDY.md) for the data, audio, and testing decisions.
 
-Requirements: Xcode with the iOS 17 SDK or newer, [XcodeGen](https://github.com/yonaskolb/XcodeGen), and [Git LFS](https://git-lfs.com/). Git LFS stores the on-device neural speech model and runtime binaries that exceed GitHub's normal per-file limit.
+## Verified build and tests
+
+The [verified CI run](https://github.com/fayselomerahmed/deutsch-b1-coach-ios/actions/runs/39037289889) passed a Release iOS simulator build, **78 iOS XCTest cases**, and **7 host-runnable core tests** on 2026-10-17. Coverage includes curriculum integrity, review scheduling, free-response evaluation, speech scoring, and remote configuration.
 
 ```bash
+swift test
+```
+
+The full iOS suite runs through the shared `DeutschB1Coach` Xcode scheme. [CI configuration](.github/workflows/build.yml) documents the exact build and test commands.
+
+## Run locally
+
+Use Xcode 26.4 (the verified CI toolchain), Git LFS, and XcodeGen. The app's deployment target is iOS 17. Git LFS is required for the speech model and native binaries.
+
+```bash
+git clone https://github.com/fayselomerahmed/deutsch-b1-coach-ios.git
+cd deutsch-b1-coach-ios
 git lfs install
 git lfs pull
 xcodegen generate
 open DeutschB1Coach.xcodeproj
 ```
 
-Select the `DeutschB1Coach` scheme and an iPhone. For a physical device, choose your development team under Signing & Capabilities and keep automatic signing enabled.
+Select the `DeutschB1Coach` scheme and an installed iPhone simulator. Physical-device builds require your own signing team. The bundled course and neural audio do not require API keys; optional studio setup is documented in [Live Content](DeutschB1Coach/Docs/LiveContentSetup.md).
 
-The curriculum generator is deterministic and idempotent:
+## Release scope and credits
 
-```bash
-node Tools/generate_curriculum.js
-```
+This is a portfolio development project with verified builds and automated tests, not an App Store release claim. Physical-device validation, teacher review, production services, StoreKit configuration, and distribution requirements remain explicit [release gates](PRODUCTION_READINESS.md). Practice exams are not affiliated with Goethe-Institut, telc, or another examination provider.
 
-Instant neural audio is generated locally on the Mac with Piper's German VITS voice and bundled as compact AAC clips. The matching Thorsten model and sherpa-onnx runtime also ship in the app, allowing new corrections and role-play replies to use the same voice entirely on-device. No API key, network request, or paid speech service is required:
+[Architecture](DeutschB1Coach/Docs/Architecture.md) · [Teacher-review protocol](DeutschB1Coach/Docs/TeacherReviewProtocol.md) · [Privacy](PRIVACY.md) · [Support](SUPPORT.md) · [Third-party notices](DeutschB1Coach/Docs/ThirdPartyNotices.md)
 
-```bash
-python3.11 -m venv .venv-neural-audio
-source .venv-neural-audio/bin/activate
-pip install -r Tools/requirements-neural-audio.txt
-python Tools/generate_neural_audio.py --scope all
-xcodegen generate
-```
-
-The generator downloads and verifies the pinned CC0-trained `de_DE-thorsten-high` voice, is resumable, and skips finished clips. Use `--scope preview`, `--scope core`, or `--scope vocabulary` for smaller runs. Chatterbox Multilingual V3 remains available as a much slower high-resource option after installing `chatterbox-tts==0.1.7`; select it with `--engine chatterbox --overwrite`.
-
-## Release Configuration
-
-Create these subscription products in App Store Connect before testing production purchases:
-
-- `deutschb1coach.premium.monthly`
-- `deutschb1coach.premium.yearly`
-
-Keep `deutschb1coach.premium.lifetime` unavailable for sale. The app recognizes it only so any earlier purchase remains restorable.
-
-App Store distribution also requires product pricing/localization, screenshots, support and privacy-policy URLs, subscription review metadata, and a distribution provisioning profile. The bundled B1 exam is practice material and is not affiliated with Goethe-Institut, telc, or another examination provider.
-
-The optional companion studio uses Cloudflare D1 to store versioned curriculum and hashed managed-access records. Configure your deployment's endpoint through `LiveContentBaseURL`; see [Live Content Setup](DeutschB1Coach/Docs/LiveContentSetup.md) for the activation workflow. Learner progress and speech data remain on the iPhone.
-
-## Validation and current status
-
-The [hosted build](https://github.com/fayselomerahmed/deutsch-b1-coach-ios/actions/runs/39033663883) passed a complete Release simulator build and all 78 iOS XCTest cases on 2026-10-17, including curriculum integrity and speech scoring. Seven host-runnable core tests also pass with `swift test`, covering scheduling, free-response scoring, and HTTPS-only remote configuration.
-
-See [release readiness](PRODUCTION_READINESS.md) for the remaining service, physical-device, curriculum, and App Store checks. Remote services default to disabled in the public configuration; set your own `LiveContentBaseURL` to enable them.
-
-This is a development project. Production purchases require App Store Connect configuration, and curriculum and exam material still need the review described in the teacher-review protocol before a release claim. The B1 practice material is not an official exam or certification.
-
-## Documentation
-
-- [Architecture](DeutschB1Coach/Docs/Architecture.md)
-- [Curriculum plan](DeutschB1Coach/Docs/CurriculumPlan.md)
-- [Design system](DeutschB1Coach/Docs/DesignSystem.md)
-- [Product strategy](DeutschB1Coach/Docs/ProductStrategy.md)
-- [App Store launch](DeutschB1Coach/Docs/AppStoreLaunch.md)
-- [Teacher-review protocol](DeutschB1Coach/Docs/TeacherReviewProtocol.md)
-- [Third-party notices](DeutschB1Coach/Docs/ThirdPartyNotices.md) — Piper, the Thorsten voice, sherpa-onnx, and optional Chatterbox tooling.
+The audio integration uses sherpa-onnx, ONNX Runtime, and the Thorsten voice model. Existing model, runtime, and audio-generation notices and attribution remain part of the repository.
