@@ -15,7 +15,8 @@ let package = Package(
             "SimplifiedExplanationCatalog.swift", "SpeechRecognitionService.swift", "SpeechScorer.swift",
             "StudyReminderService.swift", "VocabularyStudyProgress.swift"
         ], sources: [
-            "SM2Scheduler.swift", "FreeResponseEvaluator.swift", "LiveContentConfiguration.swift"
+            "SM2Scheduler.swift", "FreeResponseEvaluator.swift", "LiveContentConfiguration.swift",
+            "ContentRevisionCache.swift"
         ]),
         .testTarget(name: "DeutschCoachCoreTests", dependencies: ["DeutschB1Coach"],
                     path: "DeutschB1Coach/Tests", exclude: ["CurriculumIntegrityTests.swift", "SpeechScorerTests.swift"])

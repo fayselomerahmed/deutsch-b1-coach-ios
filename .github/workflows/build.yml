@@ -1,6 +1,10 @@
 name: Build and tests
 on:
   push:
+    # Documentation-only pushes do not change the tested app. PRs still run all checks.
+    paths-ignore:
+      - '*.md'
+      - 'docs/**'
   pull_request:
   workflow_dispatch:
 permissions:

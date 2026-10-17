@@ -67,7 +67,31 @@ enum ContentPreparationPhase: Int, CaseIterable {
 final class ContentLoader {
     static let shared = ContentLoader()
 
-    private init() {}
+    private let cache = ContentRevisionCache()
+    private let contentRevision: () -> UUID
+    private let loadResource: (String) throws -> Data
+
+    private convenience init() {
+        self.init(
+            contentRevision: { AdminContentManager.shared.revision },
+            loadResource: { fileName in
+                let url = AdminContentManager.shared.activeURL(for: fileName)
+                    ?? Bundle.main.url(forResource: fileName, withExtension: "json")
+                guard let url else {
+                    throw ContentLoaderError.missingResource(fileName)
+                }
+                return try Data(contentsOf: url)
+            }
+        )
+    }
+
+    init(
+        contentRevision: @escaping () -> UUID,
+        loadResource: @escaping (String) throws -> Data
+    ) {
+        self.contentRevision = contentRevision
+        self.loadResource = loadResource
+    }
 
     func seedIfNeeded(
         modelContext: ModelContext,
@@ -214,14 +238,18 @@ final class ContentLoader {
     }
 
     func loadQuizzes() throws -> [QuizQuestionDTO] {
-        let explicit = try decode([QuizQuestionDTO].self, fileName: "quizzes")
-        let vocabulary = try allVocabulary()
-        return CurriculumFactory.quizzes(explicit: explicit, grammar: try loadGrammar(), vocabulary: vocabulary)
+        try cache.value(forKey: "generated.quizzes", revision: contentRevision()) {
+            let explicit = try decode([QuizQuestionDTO].self, fileName: "quizzes")
+            let vocabulary = try allVocabulary()
+            return CurriculumFactory.quizzes(explicit: explicit, grammar: try loadGrammar(), vocabulary: vocabulary)
+        }
     }
 
     func loadLessons() throws -> [CompleteLessonDTO] {
-        let explicit = try decode([CompleteLessonDTO].self, fileName: "lessons")
-        return CurriculumFactory.lessons(explicit: explicit, grammar: try loadGrammar(), vocabulary: try allVocabulary())
+        try cache.value(forKey: "generated.lessons", revision: contentRevision()) {
+            let explicit = try decode([CompleteLessonDTO].self, fileName: "lessons")
+            return CurriculumFactory.lessons(explicit: explicit, grammar: try loadGrammar(), vocabulary: try allVocabulary())
+        }
     }
 
     func loadPracticalMissions() throws -> [PracticalMissionDTO] {
@@ -233,7 +261,9 @@ final class ContentLoader {
     }
 
     func allVocabulary() throws -> [VocabWordDTO] {
-        try ["vocab_a1", "vocab_a2", "vocab_b1"].flatMap { try loadVocabulary(fileName: $0) }
+        try cache.value(forKey: "combined.vocabulary", revision: contentRevision()) {
+            try ["vocab_a1", "vocab_a2", "vocab_b1"].flatMap { try loadVocabulary(fileName: $0) }
+        }
     }
 
     private func syncVocab(
@@ -283,16 +313,10 @@ final class ContentLoader {
     }
 
     private func decode<T: Decodable>(_ type: T.Type, fileName: String) throws -> T {
-        let url: URL?
-        url = AdminContentManager.shared.activeURL(for: fileName)
-            ?? Bundle.main.url(forResource: fileName, withExtension: "json")
-        guard let url else {
-            throw ContentLoaderError.missingResource(fileName)
+        try cache.value(forKey: "decoded.\(fileName)", revision: contentRevision()) {
+            let data = try loadResource(fileName)
+            return try JSONDecoder().decode(type, from: data)
         }
-
-        let data = try Data(contentsOf: url)
-        let decoder = JSONDecoder()
-        return try decoder.decode(type, from: data)
     }
 }
 
