@@ -6,6 +6,14 @@ Swift · SwiftUI · SwiftData · Swift Concurrency · Speech · StoreKit 2 · Sw
 
 [![Build and tests](https://github.com/fayselomerahmed/deutsch-b1-coach-ios/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/fayselomerahmed/deutsch-b1-coach-ios/actions/workflows/build.yml)
 
+<p>
+  <img src="docs/screenshots/home.png" width="230" alt="Deutsch B1 Coach home with the next lesson and daily study plan">
+  <img src="docs/screenshots/learn-books.png" width="230" alt="Course books organized into A1, A2, and B1 levels">
+  <img src="docs/screenshots/practice.png" width="230" alt="Practice loop with recall, listening, and speaking activities">
+</p>
+
+Genuine iPhone simulator captures using bundled curriculum and fresh local state. [Reproducible capture workflow](https://github.com/fayselomerahmed/deutsch-b1-coach-ios/actions/runs/39063739835).
+
 ## The problem
 
 Language study often spreads vocabulary, grammar, speaking, and exam practice across separate tools. This project brings them into one learning path while keeping the core curriculum and learner progress available without a server connection.
@@ -27,11 +35,13 @@ Language study often spreads vocabulary, grammar, speaking, and exam practice ac
 
 **Optional services, not a startup dependency.** The companion [Curriculum Studio](https://github.com/fayselomerahmed/deutsch-b1-coach-studio) publishes versioned, hash-checked content. Verified content is retained locally; remote services require explicit HTTPS configuration and are disabled in a fresh checkout.
 
+**Recoverable storage and bounded background work.** [Startup](DeutschB1Coach/App/ModelContainerStartup.swift) offers retry if persistent storage cannot open, without deleting learner data or silently switching to temporary storage. Managed-access refreshes use a bounded cadence and retry backoff rather than continuous polling.
+
 [Read the engineering case study](docs/CASE_STUDY.md) for the data, audio, and testing decisions.
 
 ## Verified build and tests
 
-The [verified CI run](https://github.com/fayselomerahmed/deutsch-b1-coach-ios/actions/runs/39037289889) passed a Release iOS simulator build, **78 iOS XCTest cases**, and **7 host-runnable core tests** on 2026-10-17. Coverage includes curriculum integrity, review scheduling, free-response evaluation, speech scoring, and remote configuration.
+The [verified CI run](https://github.com/fayselomerahmed/deutsch-b1-coach-ios/actions/runs/39064142087) at `61a68bc` passed a Release iOS simulator build, **87 iOS XCTest cases**, and **13 host-runnable core tests** on 2026-10-17. Coverage includes curriculum integrity, review scheduling, free-response evaluation, speech scoring, remote configuration, startup recovery, and managed-access refresh policy. The core package reuses a subset of the iOS tests; these are not 100 distinct tests.
 
 ```bash
 swift test
